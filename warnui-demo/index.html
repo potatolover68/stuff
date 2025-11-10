@@ -7,14 +7,195 @@
 </head>
 <body>
     <h1>wikishield revert and warn demo</h1>
-    existing warning level: 
-    <input type="number" id="existing_warning_level" placeholder="existing warning level" value="0" style="width: 40px;" min="0" max="4">
-    <br/>
+    <div style="display: flex; flex-direction: row; width:100%;">
+    <div style="width:100%">
+      existing warning level: 
+      <input type="number" id="existing_warning_level" placeholder="existing warning level" value="0" style="width: 40px;" min="0" max="4">
+      <br/>
 
-    <input type="text" id="input" placeholder="stuff goes here">
-    <div id = "output"></div>
-    <h3>Log:</h3>
-    <ul id="log"></ul>
+      <input type="text" id="input" placeholder="stuff goes here">
+      <div id = "output"></div>
+      <h3>Log:</h3>
+      <ul id="log"></ul>
+     </div>
+      <div style="width:100%">
+        <h2>how to use</h2>
+        dd4 - if user hasn’t been warned before, 4im disruption warn. if user has been warned before, then a 4 disruption warn.
+<br/>
+href1 - gives user a level 1 warning for link spam
+<br/>
+van. - “.” means autodetect, so if user hasn’t been warned before, will give them a lvl 1 vandalism warn. (“van” is an alias of vandalism, as is “ruin”)
+<br/>
+one can manually give 4im warnings, even if user has existing warnings, using the following syntax:<br/>
+ad! - “!” means 4im, so 4im advertising warning
+
+        <br/><b>special command: </b><code> cls</code> - clears log and sets warning level to 0
+        <table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Aliases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vandalism</td>
+<td>v, vv, van, ruin</td>
+</tr>
+<tr>
+<td>Subtle vandalism</td>
+<td>vs, svan, typo</td>
+</tr>
+<tr>
+<td>Editing tests</td>
+<td>ve, test, sb, oops</td>
+</tr>
+<tr>
+<td>Deleting</td>
+<td>vd, del, rm, rf</td>
+</tr>
+<tr>
+<td>Image vandalism</td>
+<td>vi, img, ivan, jpg, png, gif, webp</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>ve, err, error</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Aliases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unsourced OR Unsourced (BLP)</td>
+<td>c, cu, fact, proof, blp, source, who</td>
+</tr>
+<tr>
+<td>POV</td>
+<td>cp, pov, npov, np</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>cc, or, synth</td>
+</tr>
+<tr>
+<td>MOS violation</td>
+<td>cf, mos, fmt</td>
+</tr>
+<tr>
+<td>AI-generated content</td>
+<td>ca, ai, llm</td>
+</tr>
+<tr>
+<td>Censoring</td>
+<td>cc, censor, cs, vdc, vc, cen</td>
+</tr>
+<tr>
+<td>Advertising</td>
+<td>sa, ad</td>
+</tr>
+<tr>
+<td>Spam links</td>
+<td>sl, href, spam, ext</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Aliases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disruption</td>
+<td>dd, dis</td>
+</tr>
+<tr>
+<td>Owning</td>
+<td>do, own, my, gollum, precious, mine</td>
+</tr>
+<tr>
+<td>Chatting</td>
+<td>dc, dis, chit, chat, talk</td>
+</tr>
+<tr>
+<td>AfD removal</td>
+<td>da, tag, afd</td>
+</tr>
+<tr>
+<td>Jokes</td>
+<td>dj, ha, lol</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Aliases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personal Conduct</td>
+<td>pc, mean, rude</td>
+</tr>
+<tr>
+<td>Personal attacks</td>
+<td>pa, insult, adhomo, ah, grr</td>
+</tr>
+<tr>
+<td>Welcome user</td>
+<td>wel, hi, hello</td>
+</tr>
+<tr>
+<td>Thank edit</td>
+<td>thx, thanks, ty</td>
+</tr>
+<tr>
+<td>Edit history of page</td>
+<td>hist, his, eh</td>
+</tr>
+<tr>
+<td>User contributions</td>
+<td>edits, contribs, ueh</td>
+</tr>
+<tr>
+<td>Report to AIV</td>
+<td>aiv, report, block</td>
+</tr>
+<tr>
+<td>Report to UAA</td>
+<td>uaa, user, promoname, name</td>
+</tr>
+<tr>
+<td>User talk page</td>
+<td>tpage, tp, tokk</td>
+</tr>
+<tr>
+<td>Article talk page</td>
+<td>atokk, discuss, reply</td>
+</tr>
+<tr>
+<td>Open article in new tab and pause queue</td>
+<td>art, read</td>
+</tr>
+</tbody>
+</table>
+      </div>
+
+     </div>
     <script>
         const input = document.getElementById('input');
         const output = document.getElementById('output');
