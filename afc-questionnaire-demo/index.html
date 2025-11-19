@@ -217,6 +217,7 @@
             />
             <div class="step3-hint" id="step3_hint3"></div>
           </div>
+          <div class="error-message" id="step3_error"></div>
         </div>
         <div id="fail_blp1e" class="step">
           <p>
@@ -401,6 +402,36 @@
         }
       }
 
+      // Calculate points for a source
+      function getSourcePoints(url) {
+        const result = checkSource(url);
+
+        if (!result.found) {
+          // Unknown source (not in RSP) = 1 point
+          return { points: 1, hasBanned: false };
+        }
+
+        const status = result.status;
+
+        // Check for banned/unreliable sources
+        if (status === "deprecated" || status === "generally unreliable") {
+          return { points: 0, hasBanned: true };
+        }
+
+        // Reliable sources (gr or reliable) = 2 points
+        if (status === "gr" || status === "reliable") {
+          return { points: 2, hasBanned: false };
+        }
+
+        // No consensus = 1 point
+        if (status === "nc") {
+          return { points: 1, hasBanned: false };
+        }
+
+        // Default: 0 points
+        return { points: 0, hasBanned: false };
+      }
+
       // Check if sources are good enough
       function areSourcesGood() {
         const sources = [
@@ -412,23 +443,44 @@
         // Check if at least one source is filled
         const filledSources = sources.filter((s) => s !== "");
         if (filledSources.length === 0) {
-          return false;
+          return {
+            success: false,
+            message: "Please provide at least one source.",
+          };
         }
 
-        // Check if we have at least one reliable source
-        let hasReliable = false;
+        // Calculate total points and check for banned sources
+        let totalPoints = 0;
+        let hasBannedSource = false;
+
         for (const source of filledSources) {
-          const result = checkSource(source);
-          if (
-            result.found &&
-            (result.status === "gr" || result.status === "reliable")
-          ) {
-            hasReliable = true;
-            break;
+          const sourceResult = getSourcePoints(source);
+          totalPoints += sourceResult.points;
+          if (sourceResult.hasBanned) {
+            hasBannedSource = true;
           }
         }
 
-        return hasReliable;
+        // Fail if there are banned/unreliable sources
+        if (hasBannedSource) {
+          return {
+            success: false,
+            message:
+              "Your sources include deprecated or unreliable sources. Please use reliable sources only.",
+          };
+        }
+
+        // Must exceed 4 points (so >= 5 points) to merit inclusion
+        if (totalPoints < 5) {
+          return {
+            success: false,
+            message: `Your sources total ${totalPoints} point${
+              totalPoints !== 1 ? "s" : ""
+            }. You need at least 5 points to merit inclusion. Reliable sources are worth 2 points each, no consensus sources are worth 1 point each, and unknown sources are worth 1 point each.`,
+          };
+        }
+
+        return { success: true, message: "" };
       }
 
       // Show step
@@ -570,11 +622,17 @@
           showStep(3);
         } else if (currentStep === 3) {
           // Check sources
-          if (!areSourcesGood()) {
-            showScreen("fail_poor_sources");
+          const sourceValidation = areSourcesGood();
+          if (!sourceValidation.success) {
+            // Show inline error message and keep sources visible
+            const errorElement = document.getElementById("step3_error");
+            errorElement.textContent = sourceValidation.message;
+            errorElement.classList.add("show");
             return;
           }
 
+          // Clear any previous error
+          document.getElementById("step3_error").classList.remove("show");
           showScreen("success");
         }
       }
@@ -654,7 +712,11 @@
         ];
 
         sourceInputs.forEach(({ input, hint }) => {
-          input.addEventListener("input", () => updateSourceHint(input, hint));
+          input.addEventListener("input", () => {
+            updateSourceHint(input, hint);
+            // Clear error message when user starts typing
+            document.getElementById("step3_error").classList.remove("show");
+          });
           input.addEventListener("blur", () => updateSourceHint(input, hint));
         });
 
