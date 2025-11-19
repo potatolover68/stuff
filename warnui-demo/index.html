@@ -1,637 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wikishield revert and warn demo</title>
     <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      body > * {
+        width: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>wikishield revert and warn demo</h1>
-    <div style="display: flex; flex-direction: row; width:100%;">
-    <div style="width:100%">
-      existing warning level: 
-      <input type="number" id="existing_warning_level" placeholder="existing warning level" value="0" style="width: 40px;" min="0" max="4">
-      <br/>
+    <div style="display: flex; flex-direction: row; width: 100%">
+      <div style="width: 100%">
+        existing warning level:
+        <input
+          type="number"
+          id="existing_warning_level"
+          placeholder="existing warning level"
+          value="0"
+          style="width: 40px"
+          min="0"
+          max="4"
+        />
+        <br />
 
-      <input type="text" id="input" placeholder="stuff goes here">
-      <div id = "output"></div>
-      <h3>Log:</h3>
-      <ul id="log"></ul>
-     </div>
-      <div style="width:100%">
-        <h2>how to use</h2>
-        dd4 - if user hasn’t been warned before, 4im disruption warn. if user has been warned before, then a 4 disruption warn.
-<br/>
-href1 - gives user a level 1 warning for link spam
-<br/>
-van. - “.” means autodetect, so if user hasn’t been warned before, will give them a lvl 1 vandalism warn. (“van” is an alias of vandalism, as is “ruin”)
-<br/>
-one can manually give 4im warnings, even if user has existing warnings, using the following syntax:<br/>
-ad! - “!” means 4im, so 4im advertising warning
-
-        <br/><b>special command: </b><code> cls</code> - clears log and sets warning level to 0
-        <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Aliases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Vandalism</td>
-<td>v, vv, van, ruin</td>
-</tr>
-<tr>
-<td>Subtle vandalism</td>
-<td>vs, svan, typo</td>
-</tr>
-<tr>
-<td>Editing tests</td>
-<td>ve, test, sb, oops</td>
-</tr>
-<tr>
-<td>Deleting</td>
-<td>vd, del, rm, rf</td>
-</tr>
-<tr>
-<td>Image vandalism</td>
-<td>vi, img, ivan, jpg, png, gif, webp</td>
-</tr>
-<tr>
-<td>Errors</td>
-<td>ve, err, error</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Aliases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Unsourced OR Unsourced (BLP)</td>
-<td>c, cu, fact, proof, blp, source, who</td>
-</tr>
-<tr>
-<td>POV</td>
-<td>cp, pov, npov, np</td>
-</tr>
-<tr>
-<td>Commentary</td>
-<td>cc, or, synth</td>
-</tr>
-<tr>
-<td>MOS violation</td>
-<td>cf, mos, fmt</td>
-</tr>
-<tr>
-<td>AI-generated content</td>
-<td>ca, ai, llm</td>
-</tr>
-<tr>
-<td>Censoring</td>
-<td>cc, censor, cs, vdc, vc, cen</td>
-</tr>
-<tr>
-<td>Advertising</td>
-<td>sa, ad</td>
-</tr>
-<tr>
-<td>Spam links</td>
-<td>sl, href, spam, ext</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Aliases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Disruption</td>
-<td>dd, dis</td>
-</tr>
-<tr>
-<td>Owning</td>
-<td>do, own, my, gollum, precious, mine</td>
-</tr>
-<tr>
-<td>Chatting</td>
-<td>dc, dis, chit, chat, talk</td>
-</tr>
-<tr>
-<td>AfD removal</td>
-<td>da, tag, afd</td>
-</tr>
-<tr>
-<td>Jokes</td>
-<td>dj, ha, lol</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Aliases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Personal Conduct</td>
-<td>pc, mean, rude</td>
-</tr>
-<tr>
-<td>Personal attacks</td>
-<td>pa, insult, adhomo, ah, grr</td>
-</tr>
-<tr>
-<td>Welcome user</td>
-<td>wel, hi, hello</td>
-</tr>
-<tr>
-<td>Thank edit</td>
-<td>thx, thanks, ty</td>
-</tr>
-<tr>
-<td>Edit history of page</td>
-<td>hist, his, eh</td>
-</tr>
-<tr>
-<td>User contributions</td>
-<td>edits, contribs, ueh</td>
-</tr>
-<tr>
-<td>Report to AIV</td>
-<td>aiv, report, block</td>
-</tr>
-<tr>
-<td>Report to UAA</td>
-<td>uaa, user, promoname, name</td>
-</tr>
-<tr>
-<td>User talk page</td>
-<td>tpage, tp, tokk</td>
-</tr>
-<tr>
-<td>Article talk page</td>
-<td>atokk, discuss, reply</td>
-</tr>
-<tr>
-<td>Open article in new tab and pause queue</td>
-<td>art, read</td>
-</tr>
-</tbody>
-</table>
+        <input type="text" id="input" placeholder="stuff goes here" />
+        <div id="output"></div>
+        <h3>Log:</h3>
+        <ul id="log"></ul>
       </div>
+      <div style="width: 100%">
+        <h2>how to use</h2>
+        dd4 - if user hasn’t been warned before, 4im disruption warn. if user
+        has been warned before, then a 4 disruption warn.
+        <br />
+        href1 - gives user a level 1 warning for link spam
+        <br />
+        van. - “.” means autodetect, so if user hasn’t been warned before, will
+        give them a lvl 1 vandalism warn. (“van” is an alias of vandalism, as is
+        “ruin”)
+        <br />
+        one can manually give 4im warnings, even if user has existing warnings,
+        using the following syntax:<br />
+        ad! - “!” means 4im, so 4im advertising warning
 
-     </div>
+        <br /><b>special command: </b><code> cls</code> - clears log and sets
+        warning level to 0
+
+        <h3>All Commands</h3>
+        <table id="commandsTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)" style="cursor: pointer">Name</th>
+              <th onclick="sortTable(1)" style="cursor: pointer">Type</th>
+              <th onclick="sortTable(2)" style="cursor: pointer">Aliases</th>
+            </tr>
+          </thead>
+          <tbody id="commandsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
     <script>
-        const input = document.getElementById('input');
-        const output = document.getElementById('output');
-        const logElement = document.getElementById('log');
-        const existing_warning_level = document.getElementById('existing_warning_level');
-        // Simulated user warning history (for demo purposes)
-        let userHasWarnings = existing_warning_level.value > 0;
-        let userWarningLevel = existing_warning_level.value;
-        let warningLog = [];
-        
-        const dummy_data = {
-            // Vandalism types
-            "v" : {
-                "isalias" : false,
-                "name" : "vandalism",
-                "desc" : "Vandalism",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "vv" : { "isalias" : true, "aliasof" : "v" },
-            "van" : { "isalias" : true, "aliasof" : "v" },
-            "ruin" : { "isalias" : true, "aliasof" : "v" },
-            
-            "vs" : {
-                "isalias" : false,
-                "name" : "subtle_vandalism",
-                "desc" : "Subtle vandalism",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "svan" : { "isalias" : true, "aliasof" : "vs" },
-            "typo" : { "isalias" : true, "aliasof" : "vs" },
-            
-            "ve" : {
-                "isalias" : false,
-                "name" : "editing_tests",
-                "desc" : "Editing tests",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "test" : { "isalias" : true, "aliasof" : "ve" },
-            "sb" : { "isalias" : true, "aliasof" : "ve" },
-            "oops" : { "isalias" : true, "aliasof" : "ve" },
-            
-            "vd" : {
-                "isalias" : false,
-                "name" : "deleting",
-                "desc" : "Deleting",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "del" : { "isalias" : true, "aliasof" : "vd" },
-            "rm" : { "isalias" : true, "aliasof" : "vd" },
-            "rf" : { "isalias" : true, "aliasof" : "vd" },
-            
-            "vi" : {
-                "isalias" : false,
-                "name" : "image_vandalism",
-                "desc" : "Image vandalism",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "img" : { "isalias" : true, "aliasof" : "vi" },
-            "ivan" : { "isalias" : true, "aliasof" : "vi" },
-            "jpg" : { "isalias" : true, "aliasof" : "vi" },
-            "png" : { "isalias" : true, "aliasof" : "vi" },
-            "gif" : { "isalias" : true, "aliasof" : "vi" },
-            "webp" : { "isalias" : true, "aliasof" : "vi" },
-            
-            "err" : {
-                "isalias" : false,
-                "name" : "errors",
-                "desc" : "Errors",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "error" : { "isalias" : true, "aliasof" : "err" },
-            
-            // Content Issues
-            "c" : {
-                "isalias" : false,
-                "name" : "unsourced",
-                "desc" : "Unsourced OR Unsourced (BLP)",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "cu" : { "isalias" : true, "aliasof" : "c" },
-            "fact" : { "isalias" : true, "aliasof" : "c" },
-            "proof" : { "isalias" : true, "aliasof" : "c" },
-            "blp" : { "isalias" : true, "aliasof" : "c" },
-            "source" : { "isalias" : true, "aliasof" : "c" },
-            "who" : { "isalias" : true, "aliasof" : "c" },
-            
-            "cp" : {
-                "isalias" : false,
-                "name" : "pov",
-                "desc" : "POV",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "pov" : { "isalias" : true, "aliasof" : "cp" },
-            "npov" : { "isalias" : true, "aliasof" : "cp" },
-            "np" : { "isalias" : true, "aliasof" : "cp" },
-            
-            "cc" : {
-                "isalias" : false,
-                "name" : "commentary",
-                "desc" : "Commentary",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "or" : { "isalias" : true, "aliasof" : "cc" },
-            "synth" : { "isalias" : true, "aliasof" : "cc" },
-            
-            "cf" : {
-                "isalias" : false,
-                "name" : "mos_violation",
-                "desc" : "MOS violation",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "mos" : { "isalias" : true, "aliasof" : "cf" },
-            "fmt" : { "isalias" : true, "aliasof" : "cf" },
-            
-            "ca" : {
-                "isalias" : false,
-                "name" : "ai_content",
-                "desc" : "AI-generated content",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "ai" : { "isalias" : true, "aliasof" : "ca" },
-            "llm" : { "isalias" : true, "aliasof" : "ca" },
-            
-            "censor" : {
-                "isalias" : false,
-                "name" : "censoring",
-                "desc" : "Censoring",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "cs" : { "isalias" : true, "aliasof" : "censor" },
-            "vdc" : { "isalias" : true, "aliasof" : "censor" },
-            "vc" : { "isalias" : true, "aliasof" : "censor" },
-            "cen" : { "isalias" : true, "aliasof" : "censor" },
-            
-            // Spam & Promotion
-            "sa" : {
-                "isalias" : false,
-                "name" : "advertising",
-                "desc" : "Advertising",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "ad" : { "isalias" : true, "aliasof" : "sa" },
-            
-            "sl" : {
-                "isalias" : false,
-                "name" : "spam_links",
-                "desc" : "Spam links",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "href" : { "isalias" : true, "aliasof" : "sl" },
-            "spam" : { "isalias" : true, "aliasof" : "sl" },
-            "ext" : { "isalias" : true, "aliasof" : "sl" },
-            
-            // Disruptive Behavior
-            "dd" : {
-                "isalias" : false,
-                "name" : "disruption",
-                "desc" : "Disruption",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "dis" : { "isalias" : true, "aliasof" : "dd" },
-            
-            "do" : {
-                "isalias" : false,
-                "name" : "owning",
-                "desc" : "Owning",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "own" : { "isalias" : true, "aliasof" : "do" },
-            "my" : { "isalias" : true, "aliasof" : "do" },
-            "gollum" : { "isalias" : true, "aliasof" : "do" },
-            "precious" : { "isalias" : true, "aliasof" : "do" },
-            "mine" : { "isalias" : true, "aliasof" : "do" },
-            
-            "dc" : {
-                "isalias" : false,
-                "name" : "chatting",
-                "desc" : "Chatting",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "chit" : { "isalias" : true, "aliasof" : "dc" },
-            "chat" : { "isalias" : true, "aliasof" : "dc" },
-            "talk" : { "isalias" : true, "aliasof" : "dc" },
-            
-            "da" : {
-                "isalias" : false,
-                "name" : "afd_removal",
-                "desc" : "AfD removal",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "tag" : { "isalias" : true, "aliasof" : "da" },
-            "afd" : { "isalias" : true, "aliasof" : "da" },
-            
-            "dj" : {
-                "isalias" : false,
-                "name" : "jokes",
-                "desc" : "Jokes",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "ha" : { "isalias" : true, "aliasof" : "dj" },
-            "lol" : { "isalias" : true, "aliasof" : "dj" },
-            
-            // Personal Conduct
-            "pc" : {
-                "isalias" : false,
-                "name" : "personal_conduct",
-                "desc" : "Personal Conduct",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "mean" : { "isalias" : true, "aliasof" : "pc" },
-            "rude" : { "isalias" : true, "aliasof" : "pc" },
-            
-            "pa" : {
-                "isalias" : false,
-                "name" : "personal_attacks",
-                "desc" : "Personal attacks",
-                "warn_levels" : { "1" : "warn 1", "2" : "warn 2", "3" : "warn 3", "4" : "warn 4", "4im" : "warn 4im" }
-            },
-            "insult" : { "isalias" : true, "aliasof" : "pa" },
-            "adhomo" : { "isalias" : true, "aliasof" : "pa" },
-            "ah" : { "isalias" : true, "aliasof" : "pa" },
-            "grr" : { "isalias" : true, "aliasof" : "pa" },
-            
-            // Non-warnings
-            "wel" : {
-                "isalias" : false,
-                "name" : "welcome",
-                "desc" : "Welcome user",
-                "is_nonwarning" : true
-            },
-            "hi" : { "isalias" : true, "aliasof" : "wel" },
-            "hello" : { "isalias" : true, "aliasof" : "wel" },
-            
-            "thx" : {
-                "isalias" : false,
-                "name" : "thank",
-                "desc" : "Thank edit",
-                "is_nonwarning" : true
-            },
-            "thanks" : { "isalias" : true, "aliasof" : "thx" },
-            "ty" : { "isalias" : true, "aliasof" : "thx" },
-            
-            "hist" : {
-                "isalias" : false,
-                "name" : "edit_history",
-                "desc" : "Edit history of page",
-                "is_nonwarning" : true
-            },
-            "his" : { "isalias" : true, "aliasof" : "hist" },
-            "eh" : { "isalias" : true, "aliasof" : "hist" },
-            
-            "edits" : {
-                "isalias" : false,
-                "name" : "user_contribs",
-                "desc" : "User contributions",
-                "is_nonwarning" : true
-            },
-            "contribs" : { "isalias" : true, "aliasof" : "edits" },
-            "ueh" : { "isalias" : true, "aliasof" : "edits" },
-            
-            "aiv" : {
-                "isalias" : false,
-                "name" : "report_aiv",
-                "desc" : "Report to AIV",
-                "is_nonwarning" : true
-            },
-            "report" : { "isalias" : true, "aliasof" : "aiv" },
-            "block" : { "isalias" : true, "aliasof" : "aiv" },
-            
-            "uaa" : {
-                "isalias" : false,
-                "name" : "report_uaa",
-                "desc" : "Report to UAA",
-                "is_nonwarning" : true
-            },
-            "user" : { "isalias" : true, "aliasof" : "uaa" },
-            "promoname" : { "isalias" : true, "aliasof" : "uaa" },
-            "name" : { "isalias" : true, "aliasof" : "uaa" },
-            
-            "tpage" : {
-                "isalias" : false,
-                "name" : "user_talk",
-                "desc" : "User talk page",
-                "is_nonwarning" : true
-            },
-            "tp" : { "isalias" : true, "aliasof" : "tpage" },
-            "tokk" : { "isalias" : true, "aliasof" : "tpage" },
-            
-            "atokk" : {
-                "isalias" : false,
-                "name" : "article_talk",
-                "desc" : "Article talk page",
-                "is_nonwarning" : true
-            },
-            "discuss" : { "isalias" : true, "aliasof" : "atokk" },
-            "reply" : { "isalias" : true, "aliasof" : "atokk" },
-            
-            "art" : {
-                "isalias" : false,
-                "name" : "open_article",
-                "desc" : "Open article in new tab and pause queue",
-                "is_nonwarning" : true
-            },
-            "read" : { "isalias" : true, "aliasof" : "art" },
-            
-            // Special commands
-            "cls" : {
-                "isalias" : false,
-                "name" : "reset_warnings",
-                "desc" : "Reset warning level to 0",
-                "is_reset" : true
+      const input = document.getElementById("input");
+      const output = document.getElementById("output");
+      const logElement = document.getElementById("log");
+      const existing_warning_level = document.getElementById(
+        "existing_warning_level"
+      );
+      // Simulated user warning history (for demo purposes)
+      let userHasWarnings = existing_warning_level.value > 0;
+      let userWarningLevel = existing_warning_level.value;
+      let warningLog = [];
+
+      const data = {
+        // Vandalism types
+        v: {
+          isalias: false,
+          name: "vandalism",
+          desc: "Vandalism",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        vv: { isalias: true, aliasof: "v" },
+        van: { isalias: true, aliasof: "v" },
+        ruin: { isalias: true, aliasof: "v" },
+
+        vs: {
+          isalias: false,
+          name: "subtle_vandalism",
+          desc: "Subtle vandalism",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        svan: { isalias: true, aliasof: "vs" },
+        typo: { isalias: true, aliasof: "vs" },
+
+        ve: {
+          isalias: false,
+          name: "editing_tests",
+          desc: "Editing tests",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        test: { isalias: true, aliasof: "ve" },
+        sb: { isalias: true, aliasof: "ve" },
+        oops: { isalias: true, aliasof: "ve" },
+
+        vd: {
+          isalias: false,
+          name: "deleting",
+          desc: "Deleting",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        del: { isalias: true, aliasof: "vd" },
+        rm: { isalias: true, aliasof: "vd" },
+        rf: { isalias: true, aliasof: "vd" },
+
+        vi: {
+          isalias: false,
+          name: "image_vandalism",
+          desc: "Image vandalism",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        img: { isalias: true, aliasof: "vi" },
+        ivan: { isalias: true, aliasof: "vi" },
+        jpg: { isalias: true, aliasof: "vi" },
+        png: { isalias: true, aliasof: "vi" },
+        gif: { isalias: true, aliasof: "vi" },
+        webp: { isalias: true, aliasof: "vi" },
+
+        err: {
+          isalias: false,
+          name: "errors",
+          desc: "Errors",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        error: { isalias: true, aliasof: "err" },
+
+        // Content Issues
+        c: {
+          isalias: false,
+          name: "unsourced",
+          desc: "Unsourced OR Unsourced (BLP)",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        cu: { isalias: true, aliasof: "c" },
+        fact: { isalias: true, aliasof: "c" },
+        proof: { isalias: true, aliasof: "c" },
+        blp: { isalias: true, aliasof: "c" },
+        source: { isalias: true, aliasof: "c" },
+        who: { isalias: true, aliasof: "c" },
+
+        cp: {
+          isalias: false,
+          name: "pov",
+          desc: "POV",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        pov: { isalias: true, aliasof: "cp" },
+        npov: { isalias: true, aliasof: "cp" },
+        np: { isalias: true, aliasof: "cp" },
+
+        cc: {
+          isalias: false,
+          name: "commentary",
+          desc: "Commentary",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        or: { isalias: true, aliasof: "cc" },
+        synth: { isalias: true, aliasof: "cc" },
+
+        cf: {
+          isalias: false,
+          name: "mos_violation",
+          desc: "MOS violation",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        mos: { isalias: true, aliasof: "cf" },
+        fmt: { isalias: true, aliasof: "cf" },
+
+        ca: {
+          isalias: false,
+          name: "ai_content",
+          desc: "AI-generated content",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        ai: { isalias: true, aliasof: "ca" },
+        llm: { isalias: true, aliasof: "ca" },
+
+        censor: {
+          isalias: false,
+          name: "censoring",
+          desc: "Censoring",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        cs: { isalias: true, aliasof: "censor" },
+        vdc: { isalias: true, aliasof: "censor" },
+        vc: { isalias: true, aliasof: "censor" },
+        cen: { isalias: true, aliasof: "censor" },
+
+        // Spam & Promotion
+        sa: {
+          isalias: false,
+          name: "advertising",
+          desc: "Advertising",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        ad: { isalias: true, aliasof: "sa" },
+
+        sl: {
+          isalias: false,
+          name: "spam_links",
+          desc: "Spam links",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        href: { isalias: true, aliasof: "sl" },
+        spam: { isalias: true, aliasof: "sl" },
+        ext: { isalias: true, aliasof: "sl" },
+
+        // Disruptive Behavior
+        dd: {
+          isalias: false,
+          name: "disruption",
+          desc: "Disruption",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        dis: { isalias: true, aliasof: "dd" },
+
+        do: {
+          isalias: false,
+          name: "owning",
+          desc: "Owning",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        own: { isalias: true, aliasof: "do" },
+        my: { isalias: true, aliasof: "do" },
+        gollum: { isalias: true, aliasof: "do" },
+        precious: { isalias: true, aliasof: "do" },
+        mine: { isalias: true, aliasof: "do" },
+
+        dc: {
+          isalias: false,
+          name: "chatting",
+          desc: "Chatting",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        chit: { isalias: true, aliasof: "dc" },
+        chat: { isalias: true, aliasof: "dc" },
+        talk: { isalias: true, aliasof: "dc" },
+
+        da: {
+          isalias: false,
+          name: "afd_removal",
+          desc: "AfD removal",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        tag: { isalias: true, aliasof: "da" },
+        afd: { isalias: true, aliasof: "da" },
+
+        dj: {
+          isalias: false,
+          name: "jokes",
+          desc: "Jokes",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        ha: { isalias: true, aliasof: "dj" },
+        lol: { isalias: true, aliasof: "dj" },
+
+        // Personal Conduct
+        pc: {
+          isalias: false,
+          name: "personal_conduct",
+          desc: "Personal Conduct",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        mean: { isalias: true, aliasof: "pc" },
+        rude: { isalias: true, aliasof: "pc" },
+
+        pa: {
+          isalias: false,
+          name: "personal_attacks",
+          desc: "Personal attacks",
+          warn_levels: {
+            1: "warn 1",
+            2: "warn 2",
+            3: "warn 3",
+            4: "warn 4",
+            "4im": "warn 4im",
+          },
+        },
+        insult: { isalias: true, aliasof: "pa" },
+        adhomo: { isalias: true, aliasof: "pa" },
+        ah: { isalias: true, aliasof: "pa" },
+        grr: { isalias: true, aliasof: "pa" },
+
+        // Non-warnings
+        wel: {
+          isalias: false,
+          name: "welcome",
+          desc: "Welcome user",
+          is_nonwarning: true,
+        },
+        hi: { isalias: true, aliasof: "wel" },
+        hello: { isalias: true, aliasof: "wel" },
+
+        thx: {
+          isalias: false,
+          name: "thank",
+          desc: "Thank edit",
+          is_nonwarning: true,
+        },
+        thanks: { isalias: true, aliasof: "thx" },
+        ty: { isalias: true, aliasof: "thx" },
+
+        hist: {
+          isalias: false,
+          name: "edit_history",
+          desc: "Edit history of page",
+          is_nonwarning: true,
+        },
+        his: { isalias: true, aliasof: "hist" },
+        eh: { isalias: true, aliasof: "hist" },
+
+        edits: {
+          isalias: false,
+          name: "user_contribs",
+          desc: "User contributions",
+          is_nonwarning: true,
+        },
+        contribs: { isalias: true, aliasof: "edits" },
+        ueh: { isalias: true, aliasof: "edits" },
+
+        aiv: {
+          isalias: false,
+          name: "report_aiv",
+          desc: "Report to AIV",
+          is_nonwarning: true,
+        },
+        report: { isalias: true, aliasof: "aiv" },
+        block: { isalias: true, aliasof: "aiv" },
+
+        uaa: {
+          isalias: false,
+          name: "report_uaa",
+          desc: "Report to UAA",
+          is_nonwarning: true,
+        },
+        user: { isalias: true, aliasof: "uaa" },
+        promoname: { isalias: true, aliasof: "uaa" },
+        name: { isalias: true, aliasof: "uaa" },
+
+        tpage: {
+          isalias: false,
+          name: "user_talk",
+          desc: "User talk page",
+          is_nonwarning: true,
+        },
+        tp: { isalias: true, aliasof: "tpage" },
+        tokk: { isalias: true, aliasof: "tpage" },
+
+        atokk: {
+          isalias: false,
+          name: "article_talk",
+          desc: "Article talk page",
+          is_nonwarning: true,
+        },
+        discuss: { isalias: true, aliasof: "atokk" },
+        reply: { isalias: true, aliasof: "atokk" },
+
+        art: {
+          isalias: false,
+          name: "open_article",
+          desc: "Open article in new tab and pause queue",
+          is_nonwarning: true,
+        },
+        read: { isalias: true, aliasof: "art" },
+
+        // Special commands
+        cls: {
+          isalias: false,
+          name: "reset_warnings",
+          desc: "Reset warning level to 0",
+          is_reset: true,
+        },
+      };
+
+      function updateLog() {
+        logElement.innerHTML = warningLog
+          .map((entry) => `<li>${entry}</li>`)
+          .join("");
+      }
+
+      function logAction(message) {
+        warningLog.push(message);
+        updateLog();
+      }
+
+      // Generate commands table
+      function generateCommandsTable() {
+        const tableBody = document.getElementById("commandsTableBody");
+        const commandMap = new Map();
+
+        // Collect all commands and their aliases
+        for (const [key, value] of Object.entries(data)) {
+          if (!value.isalias) {
+            // This is a main command
+            const aliases = [key];
+
+            // Find all aliases for this command
+            for (const [aliasKey, aliasValue] of Object.entries(data)) {
+              if (aliasValue.isalias && aliasValue.aliasof === key) {
+                aliases.push(aliasKey);
+              }
             }
-        }
-        
-        function updateLog() {
-            logElement.innerHTML = warningLog.map(entry => `<li>${entry}</li>`).join('');
-        }
-        
-        function logAction(message) {
-            warningLog.push(message);
-            updateLog();
+
+            // Determine type
+            let type = "Warning";
+            if (value.is_nonwarning) {
+              type = "Non-warning";
+            } else if (value.is_reset) {
+              type = "Special";
+            }
+
+            commandMap.set(key, {
+              name: value.desc,
+              type: type,
+              aliases: aliases.join(", "),
+            });
+          }
         }
 
-        input.addEventListener('input', () => {
-            const val = input.value.trim();
-            
-            // Update user warning status from input
-            userWarningLevel = parseInt(existing_warning_level.value) || 0;
-            userHasWarnings = userWarningLevel > 0;
-            
-            // Parse input using regex: ([a-zA-Z]+)(\d|!|\.)?
-            const match = val.match(/^([a-zA-Z]+)(\d|!|\.|0)?$/);
-            
-            if (!match) {
-                if (val.length > 0) {
-                    output.innerHTML = "Invalid input format";
-                } else {
-                    output.innerHTML = "";
-                }
-                return;
-            }
-            
-            const [_, command, levelIndicator] = match;
-            
-            // Resolve aliases
-            let warningData = dummy_data[command];
-            if (!warningData) {
-                output.innerHTML = "Unknown command: " + command;
-                return;
-            }
-            
-            if (warningData.isalias) {
-                warningData = dummy_data[warningData.aliasof];
-            }
-            
-            // Handle reset command
-            if (warningData.is_reset) {
-                existing_warning_level.value = 0;
-                userWarningLevel = 0;
-                userHasWarnings = false;
-                logAction(`Reset warning level to 0`);
-                input.value = '';
-                output.innerHTML = '';
-                return;
-            }
-            
-            // Handle non-warnings
-            if (warningData.is_nonwarning) {
-                if (!levelIndicator) {
-                    output.innerHTML = `<em>Hint: "${command}" will ${warningData.desc.toLowerCase()}</em>`;
-                } else {
-                    logAction(`${warningData.desc}: ${warningData.name}`);
-                    output.innerHTML = `<strong>${warningData.desc}</strong><br>Action: ${warningData.name}`;
-                    input.value = '';
-                }
-                return;
-            }
-            
-            // If no level indicator, just show hint
-            if (!levelIndicator) {
-                const hintLevel = userHasWarnings ? (userWarningLevel + 1).toString() : '1';
-                output.innerHTML = `<em>Hint: "${command}." would give level ${hintLevel} warning for ${warningData.desc.toLowerCase()}</em>`;
-                return;
-            }
-            
-            // Determine warning level
-            let level;
-            if (levelIndicator === '!') {
-                // Force 4im
-                level = '4im';
-            } else if (levelIndicator === '.') {
-                // Autodetect - if no prior warnings, give level 1, otherwise give next level up
-                level = userHasWarnings ? (userWarningLevel + 1).toString() : '1';
-            } else if (levelIndicator === '0') {
-                level = '0';
-            } else {
-                // Explicit level
-                const explicitLevel = parseInt(levelIndicator);
-                if (userHasWarnings) {
-                    level = explicitLevel.toString();
-                } else {
-                    // If no prior warnings, give 4im for levels 4+
-                    level = explicitLevel >= 4 ? '4im' : explicitLevel.toString();
-                }
-            }
-            
-            const warnText = warningData.warn_levels[level] || "Unknown level";
-            
-            // Update warning level (take the numeric part for 4im)
-            const numericLevel = level === '4im' ? 4 : parseInt(level);
-            if (numericLevel > userWarningLevel) {
-                existing_warning_level.value = numericLevel;
-                userWarningLevel = numericLevel;
-                userHasWarnings = numericLevel > 0;
-            }
-            
-            // Log the action
-            logAction(`${warningData.desc} - Level ${level}: ${warnText}`);
-            
-            output.innerHTML = `
+        // Sort by name initially
+        const sortedCommands = Array.from(commandMap.values()).sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+
+        // Populate table
+        tableBody.innerHTML = sortedCommands
+          .map(
+            (cmd) => `
+           <tr>
+             <td>${cmd.name}</td>
+             <td>${cmd.type}</td>
+             <td>${cmd.aliases}</td>
+           </tr>
+         `
+          )
+          .join("");
+      }
+
+      // Sorting function
+      let sortDirection = [1, 1, 1]; // 1 for ascending, -1 for descending
+      function sortTable(columnIndex) {
+        const table = document.getElementById("commandsTable");
+        const tbody = table.querySelector("tbody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        // Toggle sort direction
+        sortDirection[columnIndex] *= -1;
+
+        // Sort rows
+        rows.sort((a, b) => {
+          const aText = a.cells[columnIndex].textContent.trim();
+          const bText = b.cells[columnIndex].textContent.trim();
+          return aText.localeCompare(bText) * sortDirection[columnIndex];
+        });
+
+        // Clear existing rows
+        tbody.innerHTML = "";
+
+        // Append sorted rows
+        rows.forEach((row) => tbody.appendChild(row));
+      }
+
+      // Initialize table on load
+      generateCommandsTable();
+
+      input.addEventListener("input", () => {
+        const val = input.value.trim();
+
+        // Update user warning status from input
+        userWarningLevel = parseInt(existing_warning_level.value) || 0;
+        userHasWarnings = userWarningLevel > 0;
+
+        // Parse input using regex: ([a-zA-Z]+)(\d|!|\.)?
+        const match = val.match(/^([a-zA-Z]+)(\d|!|\.|0)?$/);
+
+        if (!match) {
+          if (val.length > 0) {
+            output.innerHTML = "Invalid input format";
+          } else {
+            output.innerHTML = "";
+          }
+          return;
+        }
+
+        const [_, command, levelIndicator] = match;
+
+        // Resolve aliases
+        let warningData = data[command];
+        if (!warningData) {
+          output.innerHTML = "Unknown command: " + command;
+          return;
+        }
+
+        if (warningData.isalias) {
+          warningData = data[warningData.aliasof];
+        }
+
+        // Handle reset command
+        if (warningData.is_reset) {
+          existing_warning_level.value = 0;
+          userWarningLevel = 0;
+          userHasWarnings = false;
+          logAction(`Reset warning level to 0`);
+          input.value = "";
+          output.innerHTML = "";
+          return;
+        }
+
+        // Handle non-warnings
+        if (warningData.is_nonwarning) {
+          if (!levelIndicator) {
+            output.innerHTML = `<em>Hint: "${command}" will ${warningData.desc.toLowerCase()}</em>`;
+          } else {
+            logAction(`${warningData.desc}: ${warningData.name}`);
+            output.innerHTML = `<strong>${warningData.desc}</strong><br>Action: ${warningData.name}`;
+            input.value = "";
+          }
+          return;
+        }
+
+        // If no level indicator, just show hint
+        if (!levelIndicator) {
+          const hintLevel = userHasWarnings
+            ? (userWarningLevel + 1).toString()
+            : "1";
+          output.innerHTML = `<em>Hint: "${command}." would give level ${hintLevel} warning for ${warningData.desc.toLowerCase()}</em>`;
+          return;
+        }
+
+        // Determine warning level
+        let level;
+        if (levelIndicator === "!") {
+          // Force 4im
+          level = "4im";
+        } else if (levelIndicator === ".") {
+          // Autodetect - if no prior warnings, give level 1, otherwise give next level up
+          level = userHasWarnings ? (userWarningLevel + 1).toString() : "1";
+        } else if (levelIndicator === "0") {
+          level = "0";
+        } else {
+          // Explicit level
+          const explicitLevel = parseInt(levelIndicator);
+          if (userHasWarnings) {
+            level = explicitLevel.toString();
+          } else {
+            // If no prior warnings, give 4im for levels 4+
+            level = explicitLevel >= 4 ? "4im" : explicitLevel.toString();
+          }
+        }
+
+        const warnText = warningData.warn_levels[level] || "Unknown level";
+
+        // Update warning level (take the numeric part for 4im)
+        const numericLevel = level === "4im" ? 4 : parseInt(level);
+        if (numericLevel > userWarningLevel) {
+          existing_warning_level.value = numericLevel;
+          userWarningLevel = numericLevel;
+          userHasWarnings = numericLevel > 0;
+        }
+
+        // Log the action
+        logAction(`${warningData.desc} - Level ${level}: ${warnText}`);
+
+        output.innerHTML = `
                 <strong>${warningData.desc}</strong><br>
                 Type: ${warningData.name}<br>
                 Level: ${level}<br>
                 Warning: ${warnText}<br>
             `;
-            
-            // Clear input after action
-            input.value = '';
-        });
 
+        // Clear input after action
+        input.value = "";
+      });
     </script>
-</body>
+  </body>
 </html>
