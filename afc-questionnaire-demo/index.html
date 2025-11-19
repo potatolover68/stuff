@@ -1,17 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>articles for creation questionnaire demo</title>
     <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
+      body > div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+      }
+      body > div > div {
+        width: 100%;
+      }
+      .demo {
+        border: 1px;
+        padding: 10px;
+        border-style: dotted;
+      }
+      #nav_buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .step {
+        display: none;
+      }
+      .step.active {
+        display: block;
+      }
+      .step3-hint {
+        display: none;
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 0.9em;
+      }
+      .step3-hint.show {
+        display: block;
+      }
+      .step3-hint.error {
+        color: red;
+      }
+      .step3-hint.warning {
+        color: orange;
+      }
+      .step3-hint.success {
+        color: green;
+      }
+      .error-message {
+        color: red;
+        margin-top: 10px;
+        display: none;
+      }
+      .error-message.show {
+        display: block;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>articles for creation questionnaire demo</h1>
+    <div>
+      <div class="demo">
+        <h2>demo flow</h2>
+        <div id="step">
+          <b
+            >step <span id="step_number">1</span>/<span id="step_total"
+              >3</span
+            ></b
+          >
+        </div>
+        <div id="step1" class="step active">
+          <p>What is your article about?</p>
+          <div>
+            <input
+              type="radio"
+              name="step1_pagetype"
+              value="bio"
+              id="step1_bio"
+            />
+            <label for="step1_bio">a person</label><br />
+            <input
+              type="radio"
+              name="step1_pagetype"
+              value="event"
+              id="step1_event"
+            />
+            <label for="step1_event">an event</label><br />
+            <input
+              type="radio"
+              name="step1_pagetype"
+              value="place"
+              id="step1_place"
+            />
+            <label for="step1_place">a place</label><br />
+            <input
+              type="radio"
+              name="step1_pagetype"
+              value="org"
+              id="step1_org"
+            />
+            <label for="step1_org">a company, organization, or group</label
+            ><br />
+            <input
+              type="radio"
+              name="step1_pagetype"
+              value="band"
+              id="step1_band"
+            />
+            <label for="step1_band">a band or musical group</label><br />
+          </div>
+          <div class="error-message" id="step1_error">
+            Please select an article type.
+          </div>
+        </div>
+        <div id="step2_generic" class="step">
+          <p id="step2_generic_question_title">
+            What is the name of the person?
+          </p>
+          <input
+            type="text"
+            name="step2_title"
+            id="step2_title"
+            placeholder="title"
+          />
+          <div id="step2_blp1e_section" style="display: none">
+            <p id="step2_blp1e_question">
+              <!-- only shows if article type is person -->
+              Is this person living/recently deceased, and is famous for only
+              one thing they did? (BLP1E)
+            </p>
+            <div>
+              <input
+                type="radio"
+                name="step2_blp1e"
+                value="yes"
+                id="step2_blp1e_yes"
+              />
+              <label for="step2_blp1e_yes">yes</label><br />
+              <input
+                type="radio"
+                name="step2_blp1e"
+                value="no"
+                id="step2_blp1e_no"
+              />
+              <label for="step2_blp1e_no">no</label><br />
+            </div>
+          </div>
+          <div class="error-message" id="step2_error">
+            Please fill in all required fields.
+          </div>
+        </div>
+
+        <div id="step3_rule_of_three" class="step">
+          <p>
+            Wikipedia has
+            <a href="https://en.wikipedia.org/wiki/WP:GNG">guidelines</a> that
+            decide whether a subject merits an article. A good rule of thumb for
+            this is, if an editor can find 3 reliable and independent sources
+            about the subject, then the subject is notable enough to merit an
+            article.
+          </p>
+          <details>
+            <summary>more details, and tips</summary>
+            <p></p>
+            <p>A good source is...</p>
+            <ul>
+              <li>
+                reliable - the source is credible and trustworthy, and should
+                have a reputation. think nbc news, or the new york times.
+                sources with no reputation are usually not reliable.
+              </li>
+              <li>
+                independent - the source is not affiliated with the subject, eg
+                not a press release from the subject's company, or a blog post
+                from the subject's friend. interviews, and the subject's own
+                blogs don't establish notability.
+              </li>
+              <li>
+                significant - the source is about the subject, and is not about
+                something else. think a news article about the subject, not a
+                news article about the subject's dog, the subject's family, or
+                the subject's friends. the source should be entirely or largely
+                about the subject.
+              </li>
+            </ul>
+          </details>
+          <div>
+            <input
+              type="text"
+              name="step3_source1"
+              id="step3_source1"
+              placeholder="source 1 (URL)"
+            />
+            <div class="step3-hint" id="step3_hint1"></div>
+            <br />
+            <input
+              type="text"
+              name="step3_source2"
+              id="step3_source2"
+              placeholder="source 2 (URL)"
+            />
+            <div class="step3-hint" id="step3_hint2"></div>
+            <br />
+            <input
+              type="text"
+              name="step3_source3"
+              id="step3_source3"
+              placeholder="source 3 (URL)"
+            />
+            <div class="step3-hint" id="step3_hint3"></div>
+          </div>
+        </div>
+        <div id="fail_blp1e" class="step">
+          <p>
+            Sadly, this person likely does not merit an article on wikipedia, as
+            they are only famous for one event, by Wikipedia's
+            <a href="https://en.wikipedia.org/wiki/WP:BLP1E">BLP1E</a> policy.
+            If you want to learn more, you can read the relevant policy(the
+            <a href="https://en.wikipedia.org/wiki/WP:BIO">WP:BIO</a>), or you
+            can post a message to the
+            <a href="https://en.wikipedia.org/wiki/WP:TEAHOUSE">teahouse</a>
+            to ask more experienced editors for help.
+          </p>
+          <button id="restart_blp1e">start demo over</button>
+        </div>
+        <div id="fail_poor_sources" class="step">
+          <p>
+            Sadly, this subject likely does not merit an article on wikipedia,
+            as the sources you provided are not reliable.
+          </p>
+          <p>
+            You can try again with different sources, or you can post a message
+            to the
+            <a href="https://en.wikipedia.org/wiki/WP:TEAHOUSE">teahouse</a>
+            to ask more experienced editors for help.
+          </p>
+          <button id="restart_sources">start demo over</button>
+        </div>
+        <div id="success" class="step">
+          <p>
+            congratulations! This subject is notable enough to merit an article
+            on wikipedia.
+          </p>
+          <p>You can now submit your article to wikipedia.</p>
+          <button id="restart_success">start demo over</button>
+        </div>
+
+        <div id="nav_buttons">
+          <button id="back">← back</button>
+          <button id="next">next →</button>
+        </div>
+      </div>
+      <div>
+        <h2>why?</h2>
+        <p>
+          a problem with the current afc process is that there are an abundance
+          of drafts that have no sources at all and are obviously non-notable,
+          and the creators of the drafts don't have knowledge of the notablity
+          guidelines, resulting in the draft being rejected, and likely speedily
+          deleted. this turns off the draft writers, who has had their hard work
+          deleted off wikipedia, and buries well-written drafts in the gigantic
+          AFC backlog.
+        </p>
+        <h2>how does this help?</h2>
+        <p>
+          most newer editors don't have knowledge about the notablity
+          guidelines, and telling them to "just read the policy" isn't helpful,
+          especially when the policy is long and complex. asking a editor to
+          find 3 reliable sources instead is much more hands-on, and simpler to
+          do.
+        </p>
+        <h2>
+          why does it use the rsp? i thought it wasn't "a representative sample
+          of all sources used on Wikipedia or all sources in existence"
+        </h2>
+        <p>
+          The RSP is a representative sample of all sources used on Wikipedia or
+          all sources in existence. /s
+          <br /><br />
+          the RSP is just used for the sake of the demo, and a better solution
+          will be implemented if this is accepted.
+        </p>
+      </div>
+    </div>
+    <script>
+      // State management
+      let currentStep = 1;
+      let rspSources = [];
+      const questionTexts = {
+        bio: "What is the name of the person?",
+        event: "What is the name of the event?",
+        place: "What is the name of the place?",
+        org: "What is the name of the company, organization, or group?",
+        band: "What is the name of the band or musical group?",
+      };
+
+      // Load RSP sources
+      async function loadRSPSources() {
+        try {
+          const response = await fetch("rspsources.json");
+          rspSources = await response.json();
+        } catch (error) {
+          console.error("Error loading RSP sources:", error);
+        }
+      }
+
+      // Extract domain from URL
+      function extractDomain(url) {
+        if (!url) return "";
+        try {
+          // Remove protocol if present
+          url = url.replace(/^https?:\/\//, "");
+          // Remove www. if present
+          url = url.replace(/^www\./, "");
+          // Get domain (everything up to first /)
+          const domain = url.split("/")[0].toLowerCase();
+          return domain;
+        } catch (e) {
+          return url.toLowerCase();
+        }
+      }
+
+      // Check source against RSP
+      function checkSource(url) {
+        if (!url || url.trim() === "") {
+          return { found: false, status: null, message: "" };
+        }
+
+        const domain = extractDomain(url);
+
+        for (const source of rspSources) {
+          for (const sourceUrl of source.urls) {
+            const sourceDomain = extractDomain(sourceUrl);
+            if (
+              domain === sourceDomain ||
+              domain.endsWith("." + sourceDomain)
+            ) {
+              const status = source.status;
+              let message = "";
+              let className = "";
+
+              if (status === "gr") {
+                message =
+                  "This source is likely to be reliable, and establishes notability.";
+                className = "success";
+              } else if (status === "nc") {
+                message = "This source may be reliable, but use caution.";
+                className = "warning";
+              } else if (status === "deprecated") {
+                message = "This source is deprecated, and is not reliable.";
+                className = "error";
+              } else if (status === "generally unreliable") {
+                message =
+                  "This source is considered unreliable, and doesn't establish notability.";
+                className = "error";
+              } else if (status === "reliable") {
+                message =
+                  "This source is likely to be reliable, and establishes notability.";
+                className = "success";
+              }
+
+              return {
+                found: true,
+                status: status,
+                message: message,
+                className: className,
+              };
+            }
+          }
+        }
+
+        return {
+          found: false,
+          status: null,
+          message:
+            "This source is not on the RSP sources list, and is possibly not reliable.",
+          className: "warning",
+        };
+      }
+
+      // Update source hint
+      function updateSourceHint(sourceInput, hintElement) {
+        const url = sourceInput.value.trim();
+        const result = checkSource(url);
+
+        if (url === "") {
+          hintElement.textContent = "";
+          hintElement.className = "step3-hint";
+          hintElement.classList.remove("show");
+        } else {
+          hintElement.textContent = result.message;
+          hintElement.className = "step3-hint show " + result.className;
+        }
+      }
+
+      // Check if sources are good enough
+      function areSourcesGood() {
+        const sources = [
+          document.getElementById("step3_source1").value.trim(),
+          document.getElementById("step3_source2").value.trim(),
+          document.getElementById("step3_source3").value.trim(),
+        ];
+
+        // Check if at least one source is filled
+        const filledSources = sources.filter((s) => s !== "");
+        if (filledSources.length === 0) {
+          return false;
+        }
+
+        // Check if we have at least one reliable source
+        let hasReliable = false;
+        for (const source of filledSources) {
+          const result = checkSource(source);
+          if (
+            result.found &&
+            (result.status === "gr" || result.status === "reliable")
+          ) {
+            hasReliable = true;
+            break;
+          }
+        }
+
+        return hasReliable;
+      }
+
+      // Show step
+      function showStep(stepNum) {
+        // Hide all steps
+        document.querySelectorAll(".step").forEach((step) => {
+          step.classList.remove("active");
+        });
+
+        // Show current step
+        const stepMap = {
+          1: "step1",
+          2: "step2_generic",
+          3: "step3_rule_of_three",
+        };
+
+        if (stepMap[stepNum]) {
+          document.getElementById(stepMap[stepNum]).classList.add("active");
+        }
+
+        // Update step number
+        document.getElementById("step_number").textContent = stepNum;
+
+        // Show/hide nav buttons (hide on fail/success screens)
+        const navButtons = document.getElementById("nav_buttons");
+        const backButton = document.getElementById("back");
+        if (stepNum >= 1 && stepNum <= 3) {
+          navButtons.style.display = "flex";
+          // Hide back button on step 1
+          if (stepNum === 1) {
+            backButton.style.display = "none";
+          } else {
+            backButton.style.display = "inline-block";
+          }
+        } else {
+          navButtons.style.display = "none";
+        }
+      }
+
+      // Show fail/success screen
+      function showScreen(screenId) {
+        document.querySelectorAll(".step").forEach((step) => {
+          step.classList.remove("active");
+        });
+        document.getElementById(screenId).classList.add("active");
+        document.getElementById("nav_buttons").style.display = "none";
+      }
+
+      // Validate step 1
+      function validateStep1() {
+        const selected = document.querySelector(
+          'input[name="step1_pagetype"]:checked'
+        );
+        if (!selected) {
+          document.getElementById("step1_error").classList.add("show");
+          return false;
+        }
+        document.getElementById("step1_error").classList.remove("show");
+        return true;
+      }
+
+      // Validate step 2
+      function validateStep2() {
+        const title = document.getElementById("step2_title").value.trim();
+        const pageType = document.querySelector(
+          'input[name="step1_pagetype"]:checked'
+        )?.value;
+
+        if (!title) {
+          document.getElementById("step2_error").classList.add("show");
+          return false;
+        }
+
+        // If bio, check BLP1E
+        if (pageType === "bio") {
+          const blp1e = document.querySelector(
+            'input[name="step2_blp1e"]:checked'
+          );
+          if (!blp1e) {
+            document.getElementById("step2_error").classList.add("show");
+            return false;
+          }
+        }
+
+        document.getElementById("step2_error").classList.remove("show");
+        return true;
+      }
+
+      // Update step 2 question based on article type
+      function updateStep2Question() {
+        const pageType = document.querySelector(
+          'input[name="step1_pagetype"]:checked'
+        )?.value;
+        if (pageType && questionTexts[pageType]) {
+          document.getElementById("step2_generic_question_title").textContent =
+            questionTexts[pageType];
+        }
+
+        // Show/hide BLP1E section
+        const blp1eSection = document.getElementById("step2_blp1e_section");
+        if (pageType === "bio") {
+          blp1eSection.style.display = "block";
+        } else {
+          blp1eSection.style.display = "none";
+          // Clear BLP1E selection if not bio
+          document
+            .querySelectorAll('input[name="step2_blp1e"]')
+            .forEach((radio) => {
+              radio.checked = false;
+            });
+        }
+      }
+
+      // Next button handler
+      function handleNext() {
+        if (currentStep === 1) {
+          if (!validateStep1()) return;
+          currentStep = 2;
+          updateStep2Question();
+          showStep(2);
+        } else if (currentStep === 2) {
+          if (!validateStep2()) return;
+
+          // Check BLP1E
+          const pageType = document.querySelector(
+            'input[name="step1_pagetype"]:checked'
+          )?.value;
+          if (pageType === "bio") {
+            const blp1e = document.querySelector(
+              'input[name="step2_blp1e"]:checked'
+            )?.value;
+            if (blp1e === "yes") {
+              showScreen("fail_blp1e");
+              return;
+            }
+          }
+
+          currentStep = 3;
+          showStep(3);
+        } else if (currentStep === 3) {
+          // Check sources
+          if (!areSourcesGood()) {
+            showScreen("fail_poor_sources");
+            return;
+          }
+
+          showScreen("success");
+        }
+      }
+
+      // Back button handler
+      function handleBack() {
+        if (currentStep > 1 && currentStep <= 3) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+
+      // Reset demo
+      function resetDemo() {
+        currentStep = 1;
+
+        // Reset all inputs
+        document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          radio.checked = false;
+        });
+        document.querySelectorAll('input[type="text"]').forEach((input) => {
+          input.value = "";
+        });
+
+        // Clear hints
+        document.querySelectorAll(".step3-hint").forEach((hint) => {
+          hint.textContent = "";
+          hint.className = "step3-hint";
+        });
+
+        // Clear errors
+        document.querySelectorAll(".error-message").forEach((error) => {
+          error.classList.remove("show");
+        });
+
+        showStep(1);
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", async () => {
+        await loadRSPSources();
+
+        // Set up event listeners
+        document.getElementById("next").addEventListener("click", handleNext);
+        document.getElementById("back").addEventListener("click", handleBack);
+        document
+          .getElementById("restart_blp1e")
+          .addEventListener("click", resetDemo);
+        document
+          .getElementById("restart_sources")
+          .addEventListener("click", resetDemo);
+        document
+          .getElementById("restart_success")
+          .addEventListener("click", resetDemo);
+
+        // Update step 2 question when page type changes
+        document
+          .querySelectorAll('input[name="step1_pagetype"]')
+          .forEach((radio) => {
+            radio.addEventListener("change", updateStep2Question);
+          });
+
+        // Source validation on input
+        const sourceInputs = [
+          {
+            input: document.getElementById("step3_source1"),
+            hint: document.getElementById("step3_hint1"),
+          },
+          {
+            input: document.getElementById("step3_source2"),
+            hint: document.getElementById("step3_hint2"),
+          },
+          {
+            input: document.getElementById("step3_source3"),
+            hint: document.getElementById("step3_hint3"),
+          },
+        ];
+
+        sourceInputs.forEach(({ input, hint }) => {
+          input.addEventListener("input", () => updateSourceHint(input, hint));
+          input.addEventListener("blur", () => updateSourceHint(input, hint));
+        });
+
+        // Initial step display
+        showStep(1);
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,3542 @@
+[
+  {
+    "name": "112 Ukraine",
+    "status": "generally unreliable",
+    "urls": [
+      "112.ua",
+      "112.international"
+    ]
+  },
+  {
+    "name": "ABC News (United States)",
+    "status": "gr",
+    "urls": [
+      "abcnews.com",
+      "abcnews.go.com"
+    ]
+  },
+  {
+    "name": "Academic repositories",
+    "status": "nc",
+    "urls": [
+      "academia.edu",
+      "researchgate.net",
+      "zenodo.org"
+    ]
+  },
+  {
+    "name": "Acclaimed Music",
+    "status": "generally unreliable",
+    "urls": [
+      "acclaimedmusic.net"
+    ]
+  },
+  {
+    "name": "Ad Fontes Media",
+    "status": "generally unreliable",
+    "urls": [
+      "adfontesmedia.com"
+    ]
+  },
+  {
+    "name": "Advameg",
+    "status": "reliable",
+    "urls": [
+      "company-histories.com",
+      "fundinguniverse.com"
+    ]
+  },
+  {
+    "name": "The Age",
+    "status": "gr",
+    "urls": [
+      "theage.com.au"
+    ]
+  },
+  {
+    "name": "Agence France-Presse",
+    "status": "gr",
+    "urls": [
+      "afp.com"
+    ]
+  },
+  {
+    "name": "Al Arabiya",
+    "status": "nc",
+    "urls": [
+      "alarabiya.net"
+    ]
+  },
+  {
+    "name": "Al Jazeera Media Network",
+    "status": "gr",
+    "urls": [
+      "aljazeera.com",
+      "aljazeera.net"
+    ]
+  },
+  {
+    "name": "Al Mayadeen",
+    "status": "deprecated",
+    "urls": [
+      "almayadeen.net",
+      "almayadeen.tv"
+    ]
+  },
+  {
+    "name": "Al-Manar",
+    "status": "nc",
+    "urls": [
+      "almanar.com.lb"
+    ]
+  },
+  {
+    "name": "Alexa Internet",
+    "status": "nc",
+    "urls": [
+      "alexa.com"
+    ]
+  },
+  {
+    "name": "AllMovie",
+    "status": "generally unreliable",
+    "urls": [
+      "allmovie.com"
+    ]
+  },
+  {
+    "name": "AllSides",
+    "status": "nc",
+    "urls": [
+      "allsides.com"
+    ]
+  },
+  {
+    "name": "AlterNet",
+    "status": "generally unreliable",
+    "urls": [
+      "alternet.org"
+    ]
+  },
+  {
+    "name": "Amazon (company)",
+    "status": "generally unreliable",
+    "urls": [
+      "amazon.com",
+      "amazon.cn",
+      "amazon.in",
+      "amazon.co.jp",
+      "amazon.com.sg",
+      "amazon.com.tr",
+      "amazon.fr",
+      "amazon.de",
+      "amazon.it",
+      "amazon.nl",
+      "amazon.es",
+      "amazon.co.uk",
+      "amazon.ca",
+      "amazon.com.mx",
+      "amazon.com.au",
+      "amazon.com.br"
+    ]
+  },
+  {
+    "name": "The American Conservative",
+    "status": "nc",
+    "urls": [
+      "theamericanconservative.com"
+    ]
+  },
+  {
+    "name": "Amnesty International",
+    "status": "gr",
+    "urls": [
+      "amnesty.org"
+    ]
+  },
+  {
+    "name": "Anadolu Agency",
+    "status": "nc",
+    "urls": [
+      "aa.com.tr/en",
+      "aa.com.tr"
+    ]
+  },
+  {
+    "name": "Ancestry.com",
+    "status": "generally unreliable",
+    "urls": [
+      "ancestry.com"
+    ]
+  },
+  {
+    "name": "ANNA News",
+    "status": "deprecated",
+    "urls": [
+      "anna-news.info"
+    ]
+  },
+  {
+    "name": "Answers.com",
+    "status": "generally unreliable",
+    "urls": [
+      "answers.com"
+    ]
+  },
+  {
+    "name": "Anti-Defamation League",
+    "status": "gr",
+    "urls": [
+      "adl.org",
+      "adl.org/resources/hate-symbols/search"
+    ]
+  },
+  {
+    "name": "Antiwar.com",
+    "status": "generally unreliable",
+    "urls": [
+      "antiwar.com",
+      "antiwar.org"
+    ]
+  },
+  {
+    "name": "Aon (company)",
+    "status": "gr",
+    "urls": [
+      "aon.com"
+    ]
+  },
+  {
+    "name": "Apple Daily",
+    "status": "nc",
+    "urls": [
+      "hk.appledaily.com"
+    ]
+  },
+  {
+    "name": "Arab News",
+    "status": "nc",
+    "urls": [
+      "arabnews.com"
+    ]
+  },
+  {
+    "name": "''Army Recognition''",
+    "status": "generally unreliable",
+    "urls": [
+      "armyrecognition.com",
+      "navyrecognition.com"
+    ]
+  },
+  {
+    "name": "Ars Technica",
+    "status": "gr",
+    "urls": [
+      "arstechnica.com",
+      "arstechnica.co.uk"
+    ]
+  },
+  {
+    "name": "Asian News International",
+    "status": "nc",
+    "urls": [
+      "aninews.in"
+    ]
+  },
+  {
+    "name": "AskMen",
+    "status": "nc",
+    "urls": [
+      "askmen.com"
+    ]
+  },
+  {
+    "name": "Association of Religion Data Archives",
+    "status": "nc",
+    "urls": [
+      "thearda.com",
+      "gordonconwell.edu",
+      "globalreligiousfutures.org",
+      "pewresearch.org/religion/2015/04/02/religious-projection-table",
+      "pewresearch.org/religion/2015/04/02/religious-projections-2010-2050"
+    ]
+  },
+  {
+    "name": "Associated Press",
+    "status": "gr",
+    "urls": [
+      "ap.org",
+      "apnews.com"
+    ]
+  },
+  {
+    "name": "The Atlantic",
+    "status": "gr",
+    "urls": [
+      "theatlantic.com"
+    ]
+  },
+  {
+    "name": "Atlas Obscura",
+    "status": "generally unreliable",
+    "urls": [
+      "atlasobscura.com/places"
+    ]
+  },
+  {
+    "name": "The Australian",
+    "status": "gr",
+    "urls": [
+      "theaustralian.com.au"
+    ]
+  },
+  {
+    "name": "Australian Strategic Policy Institute",
+    "status": "nc",
+    "urls": [
+      "aspi.org.au"
+    ]
+  },
+  {
+    "name": "The A.V. Club",
+    "status": "gr",
+    "urls": [
+      "avclub.com"
+    ]
+  },
+  {
+    "name": "AVN (magazine)",
+    "status": "gr",
+    "urls": [
+      "avn.com"
+    ]
+  },
+  {
+    "name": "Axios (website)",
+    "status": "gr",
+    "urls": [
+      "axios.com"
+    ]
+  },
+  {
+    "name": "Baidu Baike",
+    "status": "deprecated",
+    "urls": [
+      "baike.baidu.com",
+      "b.baidu.com",
+      "wapbaike.baidu.com",
+      "baike.baidu.hk"
+    ]
+  },
+  {
+    "name": "Ballotpedia",
+    "status": "nc",
+    "urls": [
+      "ballotpedia.org"
+    ]
+  },
+  {
+    "name": "BBC",
+    "status": "gr",
+    "urls": [
+      "bbc.co.uk",
+      "bbc.com"
+    ]
+  },
+  {
+    "name": "Bellingcat",
+    "status": "gr",
+    "urls": [
+      "bellingcat.com"
+    ]
+  },
+  {
+    "name": "Best Gore",
+    "status": "reliable",
+    "urls": [
+      "bestgore.com"
+    ]
+  },
+  {
+    "name": "Bild",
+    "status": "generally unreliable",
+    "urls": [
+      "bild.de"
+    ]
+  },
+  {
+    "name": "Blaze Media",
+    "status": "generally unreliable",
+    "urls": [
+      "theblaze.com",
+      "conservativereview.com"
+    ]
+  },
+  {
+    "name": "Blogger (service)",
+    "status": "generally unreliable",
+    "urls": [
+      "blogspot.com"
+    ]
+  },
+  {
+    "name": "Bloomberg L.P.",
+    "status": "gr",
+    "urls": [
+      "bloomberg.com",
+      "businessweek.com"
+    ]
+  },
+  {
+    "name": "Boing Boing",
+    "status": "nc",
+    "urls": [
+      "boingboing.net"
+    ]
+  },
+  {
+    "name": "Breitbart News",
+    "status": "reliable",
+    "urls": [
+      "breitbart.com",
+      "biggovernment.com"
+    ]
+  },
+  {
+    "name": "BroadwayWorld",
+    "status": "generally unreliable",
+    "urls": [
+      "broadwayworld.com"
+    ]
+  },
+  {
+    "name": "Burke's Peerage",
+    "status": "gr",
+    "urls": [
+      "burkespeerage.com"
+    ]
+  },
+  {
+    "name": "Bustle (magazine)",
+    "status": "nc",
+    "urls": [
+      "bustle.com"
+    ]
+  },
+  {
+    "name": "BuzzFeed",
+    "status": "nc",
+    "urls": [
+      "buzzfeed.com"
+    ]
+  },
+  {
+    "name": "BuzzFeed News",
+    "status": "gr",
+    "urls": [
+      "buzzfeednews.com",
+      "buzzfeed.com"
+    ]
+  },
+  {
+    "name": "California Globe",
+    "status": "generally unreliable",
+    "urls": [
+      "californiaglobe.com"
+    ]
+  },
+  {
+    "name": "The Canary (website)",
+    "status": "generally unreliable",
+    "urls": [
+      "thecanary.co"
+    ]
+  },
+  {
+    "name": "Catholic-Hierarchy.org",
+    "status": "generally unreliable",
+    "urls": [
+      "catholic-hierarchy.org"
+    ]
+  },
+  {
+    "name": "Cato Institute",
+    "status": "nc",
+    "urls": [
+      "cato.org"
+    ]
+  },
+  {
+    "name": "CBS News",
+    "status": "gr",
+    "urls": [
+      "cbsnews.com"
+    ]
+  },
+  {
+    "name": "CelebrityNetWorth",
+    "status": "generally unreliable",
+    "urls": [
+      "celebritynetworth.com"
+    ]
+  },
+  {
+    "name": "Center for Economic and Policy Research",
+    "status": "nc",
+    "urls": [
+      "cepr.net"
+    ]
+  },
+  {
+    "name": "Centre for Research on Globalisation",
+    "status": "reliable",
+    "urls": [
+      "globalresearch.ca",
+      "globalresearch.org",
+      "mondialisation.ca"
+    ]
+  },
+  {
+    "name": "CESNUR",
+    "status": "generally unreliable",
+    "urls": [
+      "cesnur.org",
+      "cesnur.net",
+      "bitterwinter.org"
+    ]
+  },
+  {
+    "name": "Change.org",
+    "status": "reliable",
+    "urls": [
+      "change.org"
+    ]
+  },
+  {
+    "name": "Check Your Fact",
+    "status": "gr",
+    "urls": [
+      "checkyourfact.com"
+    ]
+  },
+  {
+    "name": "China Daily",
+    "status": "nc",
+    "urls": [
+      "chinadaily.com.cn",
+      "chinadailyasia.com",
+      "chinadailyhk.com"
+    ]
+  },
+  {
+    "name": "China Global Television Network",
+    "status": "deprecated",
+    "urls": [
+      "cgtn.com"
+    ]
+  },
+  {
+    "name": "Christian Broadcasting Network",
+    "status": "nc",
+    "urls": [
+      "cbn.com"
+    ]
+  },
+  {
+    "name": "The Christian Science Monitor",
+    "status": "gr",
+    "urls": [
+      "csmonitor.com"
+    ]
+  },
+  {
+    "name": "Climate Feedback",
+    "status": "gr",
+    "urls": [
+      "climatefeedback.org"
+    ]
+  },
+  {
+    "name": "CNA (TV network)",
+    "status": "gr",
+    "urls": [
+      "channelnewsasia.com"
+    ]
+  },
+  {
+    "name": "CNET",
+    "status": "gr",
+    "urls": [
+      "cnet.com"
+    ]
+  },
+  {
+    "name": "CNN",
+    "status": "gr",
+    "urls": [
+      "cnn.com"
+    ]
+  },
+  {
+    "name": "Coda Media",
+    "status": "gr",
+    "urls": [
+      "codastory.com"
+    ]
+  },
+  {
+    "name": "CoinDesk",
+    "status": "nc",
+    "urls": [
+      "coindesk.com"
+    ]
+  },
+  {
+    "name": "Common Sense Media",
+    "status": "gr",
+    "urls": [
+      "commonsensemedia.org"
+    ]
+  },
+  {
+    "name": "Consortiumnews",
+    "status": "generally unreliable",
+    "urls": [
+      "consortiumnews.com"
+    ]
+  },
+  {
+    "name": "The Conversation (website)",
+    "status": "gr",
+    "urls": [
+      "theconversation.com"
+    ]
+  },
+  {
+    "name": "Correo del Orinoco (2009)",
+    "status": "generally unreliable",
+    "urls": [
+      "correodelorinoco.gob.ve"
+    ]
+  },
+  {
+    "name": "Cosmopolitan (magazine)",
+    "status": "nc",
+    "urls": [
+      "cosmopolitan.com"
+    ]
+  },
+  {
+    "name": "CounterPunch",
+    "status": "generally unreliable",
+    "urls": [
+      "counterpunch.org",
+      "counterpunch.com"
+    ]
+  },
+  {
+    "name": "Cracked.com",
+    "status": "generally unreliable",
+    "urls": [
+      "cracked.com"
+    ]
+  },
+  {
+    "name": "Crunchbase",
+    "status": "deprecated",
+    "urls": [
+      "crunchbase.com"
+    ]
+  },
+  {
+    "name": "The Daily Beast",
+    "status": "nc",
+    "urls": [
+      "thedailybeast.com"
+    ]
+  },
+  {
+    "name": "The Daily Caller",
+    "status": "deprecated",
+    "urls": [
+      "dailycaller.com",
+      "dailycallernewsfoundation.org"
+    ]
+  },
+  {
+    "name": "The Daily Dot",
+    "status": "nc",
+    "urls": [
+      "dailydot.com"
+    ]
+  },
+  {
+    "name": "Daily Express",
+    "status": "generally unreliable",
+    "urls": [
+      "express.co.uk",
+      "pressreader.com/uk/daily-express"
+    ]
+  },
+  {
+    "name": "Daily Kos",
+    "status": "generally unreliable",
+    "urls": [
+      "dailykos.com"
+    ]
+  },
+  {
+    "name": "Daily Mail",
+    "status": "deprecated",
+    "urls": [
+      "dailymail.co.uk",
+      "thisismoney.co.uk",
+      "pressreader.com/uk/daily-mail",
+      "pressreader.com/uk/scottish-daily-mail",
+      "pressreader.com/ireland/irish-daily-mail",
+      "mailplus.co.uk",
+      "dailym.ai",
+      "dailymail.com.au",
+      "travelmail.co.uk",
+      "mailonline.pressreader.com",
+      "dailymail.com"
+    ]
+  },
+  {
+    "name": "Daily Mirror",
+    "status": "nc",
+    "urls": [
+      "mirror.co.uk"
+    ]
+  },
+  {
+    "name": "Daily NK",
+    "status": "nc",
+    "urls": [
+      "dailynk.com/english/"
+    ]
+  },
+  {
+    "name": "Daily Sabah",
+    "status": "generally unreliable",
+    "urls": [
+      "dailysabah.com"
+    ]
+  },
+  {
+    "name": "Daily Star (United Kingdom)",
+    "status": "deprecated",
+    "urls": [
+      "dailystar.co.uk",
+      "thestar.ie"
+    ]
+  },
+  {
+    "name": "The Daily Telegraph",
+    "status": "gr",
+    "urls": [
+      "telegraph.co.uk"
+    ]
+  },
+  {
+    "name": "The Daily Wire",
+    "status": "generally unreliable",
+    "urls": [
+      "dailywire.com"
+    ]
+  },
+  {
+    "name": "Deadline Hollywood",
+    "status": "gr",
+    "urls": [
+      "deadline.com",
+      "deadlinehollywooddaily.com"
+    ]
+  },
+  {
+    "name": "Debrett's",
+    "status": "gr",
+    "urls": [
+      "debretts.com"
+    ]
+  },
+  {
+    "name": "Democracy Now!",
+    "status": "nc",
+    "urls": [
+      "democracynow.org"
+    ]
+  },
+  {
+    "name": "Den of Geek",
+    "status": "gr",
+    "urls": [
+      "denofgeek.com"
+    ]
+  },
+  {
+    "name": "Deseret News",
+    "status": "gr",
+    "urls": [
+      "deseretnews.com",
+      "deseret.com"
+    ]
+  },
+  {
+    "name": "Destructoid",
+    "status": "nc",
+    "urls": [
+      "destructoid.com"
+    ]
+  },
+  {
+    "name": "Deutsche Welle",
+    "status": "gr",
+    "urls": [
+      "dw.com/en"
+    ]
+  },
+  {
+    "name": "DeviantArt",
+    "status": "generally unreliable",
+    "urls": [
+      "deviantart.com"
+    ]
+  },
+  {
+    "name": "Dexerto",
+    "status": "nc",
+    "urls": [
+      "dexerto.com",
+      "dexerto.fr",
+      "dexerto.es"
+    ]
+  },
+  {
+    "name": "Digital Spy",
+    "status": "gr",
+    "urls": [
+      "digitalspy.co.uk",
+      "digitalspy.com"
+    ]
+  },
+  {
+    "name": "Digital Trends",
+    "status": "gr",
+    "urls": [
+      "digitaltrends.com"
+    ]
+  },
+  {
+    "name": "The Diplomat (magazine)",
+    "status": "gr",
+    "urls": [
+      "thediplomat.com"
+    ]
+  },
+  {
+    "name": "Discogs",
+    "status": "generally unreliable",
+    "urls": [
+      "discogs.com"
+    ]
+  },
+  {
+    "name": "Distractify",
+    "status": "generally unreliable",
+    "urls": [
+      "distractify.com"
+    ]
+  },
+  {
+    "name": "The Dorchester Review",
+    "status": "generally unreliable",
+    "urls": [
+      "dorchesterreview.ca"
+    ]
+  },
+  {
+    "name": "Dotdash Meredith",
+    "status": "nc",
+    "urls": [
+      "about.com",
+      "thebalance.com",
+      "lifewire.com",
+      "thespruce.com",
+      "thoughtco.com",
+      "tripsavvy.com",
+      "verywell.com",
+      "verywellfamily.com",
+      "verywellhealth.com",
+      "verywellmind.com"
+    ]
+  },
+  {
+    "name": "''EADaily'' <small>(''EurAsia Daily'')</small>",
+    "status": "deprecated",
+    "urls": [
+      "eadaily.com"
+    ]
+  },
+  {
+    "name": "The Economist",
+    "status": "gr",
+    "urls": [
+      "economist.com"
+    ]
+  },
+  {
+    "name": "The Electronic Intifada",
+    "status": "generally unreliable",
+    "urls": [
+      "electronicintifada.net"
+    ]
+  },
+  {
+    "name": "Encyclopedia.com",
+    "status": "nc",
+    "urls": [
+      "encyclopedia.com"
+    ]
+  },
+  {
+    "name": "Encyclopædia Britannica",
+    "status": "nc",
+    "urls": [
+      "britannica.com"
+    ]
+  },
+  {
+    "name": "Encyclopædia Iranica",
+    "status": "gr",
+    "urls": [
+      "iranicaonline.org"
+    ]
+  },
+  {
+    "name": "Encyclopaedia Metallum",
+    "status": "deprecated",
+    "urls": [
+      "metal-archives.com"
+    ]
+  },
+  {
+    "name": "Encyclopedia Astronautica",
+    "status": "nc",
+    "urls": [
+      "www.astronautix.com"
+    ]
+  },
+  {
+    "name": "Engadget",
+    "status": "gr",
+    "urls": [
+      "engadget.com"
+    ]
+  },
+  {
+    "name": "Entertainment Weekly",
+    "status": "gr",
+    "urls": [
+      "ew.com"
+    ]
+  },
+  {
+    "name": "Entrepreneur (magazine)",
+    "status": "nc",
+    "urls": [
+      "entrepreneur.com"
+    ]
+  },
+  {
+    "name": "The Epoch Times",
+    "status": "deprecated",
+    "urls": [
+      "theepochtimes.com",
+      "epochtimes.com",
+      "ntd.com",
+      "ntdtv.com",
+      "ntdtv.ca",
+      "ntdtv.com.tw",
+      "epoch.org.il",
+      "epoch-archive.com",
+      "epochtimes.fr",
+      "epochtimes.cz",
+      "epochtimes.de",
+      "epochtimes.co.kr",
+      "epochtimes.co.il",
+      "epochtimes.it",
+      "epochtimes.ru",
+      "epochtimes.se",
+      "epochtimes-romania.com",
+      "etindonesia.com",
+      "nspirement.com",
+      "secretchina.com",
+      "trithucvn.net",
+      "vibrantdot.co",
+      "visiontimes.com",
+      "visiontimes.fr",
+      "visiontimesjp.com",
+      "visiontimes.com.au"
+    ]
+  },
+  {
+    "name": "Ethnicity of Celebs",
+    "status": "generally unreliable",
+    "urls": [
+      "ethnicelebs.com"
+    ]
+  },
+  {
+    "name": "data-sort-value=\"EurAsian Times\" | ''The EurAsian Times''",
+    "status": "generally unreliable",
+    "urls": [
+      "eurasiantimes.com"
+    ]
+  },
+  {
+    "name": "Eurogamer",
+    "status": "gr",
+    "urls": [
+      "eurogamer.net",
+      "usgamer.net",
+      "eurogamer.cz",
+      "eurogamer.de",
+      "eurogamer.es",
+      "eurogamer.nl",
+      "eurogamer.pl",
+      "eurogamer.pt"
+    ]
+  },
+  {
+    "name": "Euro-Mediterranean Human Rights Monitor",
+    "status": "nc",
+    "urls": [
+      "euromedmonitor.org"
+    ]
+  },
+  {
+    "name": "Evening Standard",
+    "status": "nc",
+    "urls": [
+      "standard.co.uk"
+    ]
+  },
+  {
+    "name": "Examiner.com",
+    "status": "reliable",
+    "urls": [
+      "examiner.com"
+    ]
+  },
+  {
+    "name": "Facebook",
+    "status": "generally unreliable",
+    "urls": [
+      "facebook.com"
+    ]
+  },
+  {
+    "name": "Fairness & Accuracy in Reporting",
+    "status": "nc",
+    "urls": [
+      "fair.org"
+    ]
+  },
+  {
+    "name": "FamilySearch",
+    "status": "generally unreliable",
+    "urls": [
+      "familysearch.org"
+    ]
+  },
+  {
+    "name": "Famous Birthdays",
+    "status": "reliable",
+    "urls": [
+      "famousbirthdays.com"
+    ]
+  },
+  {
+    "name": "Fandom (website)",
+    "status": "generally unreliable",
+    "urls": [
+      "fandom.com",
+      "wikia.com",
+      "wikia.org",
+      "wikicities.com"
+    ]
+  },
+  {
+    "name": "''Far Out''",
+    "status": "generally unreliable",
+    "urls": [
+      "faroutmagazine.co.uk"
+    ]
+  },
+  {
+    "name": "The Federalist (website)",
+    "status": "generally unreliable",
+    "urls": [
+      "thefederalist.com"
+    ]
+  },
+  {
+    "name": "FilmAffinity",
+    "status": "generally unreliable",
+    "urls": [
+      "filmaffinity.com"
+    ]
+  },
+  {
+    "name": "Financial Times",
+    "status": "gr",
+    "urls": [
+      "ft.com"
+    ]
+  },
+  {
+    "name": "Find a Grave",
+    "status": "generally unreliable",
+    "urls": [
+      "findagrave.com"
+    ]
+  },
+  {
+    "name": "Findmypast",
+    "status": "generally unreliable",
+    "urls": [
+      "findmypast.co.uk",
+      "findmypast.com"
+    ]
+  },
+  {
+    "name": "Flags of the World (website)",
+    "status": "generally unreliable",
+    "urls": [
+      "fotw.info",
+      "crwflags.com/fotw"
+    ]
+  },
+  {
+    "name": "Flickr",
+    "status": "generally unreliable",
+    "urls": [
+      "flickr.com"
+    ]
+  },
+  {
+    "name": "Forbes",
+    "status": "gr",
+    "urls": [
+      "forbes.com"
+    ]
+  },
+  {
+    "name": "Forbes.com",
+    "status": "generally unreliable",
+    "urls": [
+      "forbes.com"
+    ]
+  },
+  {
+    "name": "Forbes Advisor",
+    "status": "generally unreliable",
+    "urls": [
+      "forbes.com/advisor"
+    ]
+  },
+  {
+    "name": "Fox News",
+    "status": "nc",
+    "urls": [
+      "foxnews.com",
+      "foxbusiness.com"
+    ]
+  },
+  {
+    "name": "The Free Press (Bari Weiss media)",
+    "status": "nc",
+    "urls": [
+      "thefp.com",
+      "bariweiss.substack.com"
+    ]
+  },
+  {
+    "name": "FrontPage Magazine",
+    "status": "deprecated",
+    "urls": [
+      "frontpagemag.com",
+      "frontpagemagazine.com"
+    ]
+  },
+  {
+    "name": "Game Developer (website)",
+    "status": "gr",
+    "urls": [
+      "gamedeveloper.com",
+      "gamasutra.com"
+    ]
+  },
+  {
+    "name": "Game Informer",
+    "status": "gr",
+    "urls": [
+      "gameinformer.com"
+    ]
+  },
+  {
+    "name": "GameSpot",
+    "status": "gr",
+    "urls": [
+      "gamespot.com",
+      "gamespot.co.uk"
+    ]
+  },
+  {
+    "name": "The Gateway Pundit",
+    "status": "deprecated",
+    "urls": [
+      "thegatewaypundit.com"
+    ]
+  },
+  {
+    "name": "Gawker",
+    "status": "generally unreliable",
+    "urls": [
+      "gawker.com"
+    ]
+  },
+  {
+    "name": "Gazeta Wyborcza",
+    "status": "gr",
+    "urls": [
+      "wyborcza.pl"
+    ]
+  },
+  {
+    "name": "GB News",
+    "status": "generally unreliable",
+    "urls": [
+      "gbnews.uk",
+      "gbnews.com"
+    ]
+  },
+  {
+    "name": "Genealogy.eu",
+    "status": "deprecated",
+    "urls": [
+      "genealogy.eu",
+      "genealogy.euweb.cz"
+    ]
+  },
+  {
+    "name": "Geni.com",
+    "status": "deprecated",
+    "urls": [
+      "geni.com"
+    ]
+  },
+  {
+    "name": "Genius (website)",
+    "status": "nc",
+    "urls": [
+      "genius.com",
+      "rapgenius.com"
+    ]
+  },
+  {
+    "name": "Geographic Names Information System",
+    "status": "gr",
+    "urls": [
+      "geonames.usgs.gov"
+    ]
+  },
+  {
+    "name": "GEOnet Names Server",
+    "status": "nc",
+    "urls": [
+      "geonames.nga.mil"
+    ]
+  },
+  {
+    "name": "Gizmodo",
+    "status": "gr",
+    "urls": [
+      "gizmodo.com"
+    ]
+  },
+  {
+    "name": "GLAAD",
+    "status": "gr",
+    "urls": [
+      "glaad.org"
+    ]
+  },
+  {
+    "name": "Global Times",
+    "status": "deprecated",
+    "urls": [
+      "globaltimes.cn",
+      "huanqiu.com"
+    ]
+  },
+  {
+    "name": "GlobalSecurity.org",
+    "status": "generally unreliable",
+    "urls": [
+      "globalsecurity.org"
+    ]
+  },
+  {
+    "name": "The Globe and Mail",
+    "status": "gr",
+    "urls": [
+      "theglobeandmail.com"
+    ]
+  },
+  {
+    "name": "GoFundMe",
+    "status": "reliable",
+    "urls": [
+      "gofundme.com",
+      "youcaring.com"
+    ]
+  },
+  {
+    "name": "Goodreads",
+    "status": "generally unreliable",
+    "urls": [
+      "goodreads.com"
+    ]
+  },
+  {
+    "name": "Google Maps",
+    "status": "nc",
+    "urls": [
+      "maps.google.com",
+      "google.com/maps"
+    ]
+  },
+  {
+    "name": "GQ",
+    "status": "gr",
+    "urls": [
+      "gq.com",
+      "gq-magazine.co.uk"
+    ]
+  },
+  {
+    "name": "The Grayzone",
+    "status": "deprecated",
+    "urls": [
+      "thegrayzone.com"
+    ]
+  },
+  {
+    "name": "Greco-Roman world",
+    "status": "nc",
+    "urls": []
+  },
+  {
+    "name": "The Green Papers",
+    "status": "nc",
+    "urls": [
+      "thegreenpapers.com"
+    ]
+  },
+  {
+    "name": "The Guardian",
+    "status": "gr",
+    "urls": [
+      "theguardian.com",
+      "guardian.co.uk",
+      "theguardian.co.uk"
+    ]
+  },
+  {
+    "name": "Guido Fawkes (website)",
+    "status": "generally unreliable",
+    "urls": [
+      "order-order.com"
+    ]
+  },
+  {
+    "name": "Guinness World Records",
+    "status": "nc",
+    "urls": [
+      "guinnessworldrecords.com"
+    ]
+  },
+  {
+    "name": "Haaretz",
+    "status": "gr",
+    "urls": [
+      "haaretz.com",
+      "haaretz.co.il"
+    ]
+  },
+  {
+    "name": "Hansard",
+    "status": "nc",
+    "urls": [
+      "parliament.uk",
+      "hansard.parliament.uk",
+      "api.parliament.uk/historic-hansard",
+      "hansard.millbanksystems.com"
+    ]
+  },
+  {
+    "name": "Hardcore Gaming 101",
+    "status": "gr",
+    "urls": [
+      "hardcoregaming101.net"
+    ]
+  },
+  {
+    "name": "Healthline",
+    "status": "reliable",
+    "urls": [
+      "healthline.com"
+    ]
+  },
+  {
+    "name": "Heat Street",
+    "status": "generally unreliable",
+    "urls": [
+      "heatst.com"
+    ]
+  },
+  {
+    "name": "Heavy.com",
+    "status": "nc",
+    "urls": [
+      "heavy.com"
+    ]
+  },
+  {
+    "name": "The Heritage Foundation",
+    "status": "reliable",
+    "urls": [
+      "heritage.org"
+    ]
+  },
+  {
+    "name": "The Hill (newspaper)",
+    "status": "gr",
+    "urls": [
+      "thehill.com"
+    ]
+  },
+  {
+    "name": "The Hindu",
+    "status": "gr",
+    "urls": [
+      "thehindu.com"
+    ]
+  },
+  {
+    "name": "HispanTV",
+    "status": "deprecated",
+    "urls": [
+      "hispantv.com",
+      "hispantv.ir"
+    ]
+  },
+  {
+    "name": "History Channel",
+    "status": "generally unreliable",
+    "urls": [
+      "history.com"
+    ]
+  },
+  {
+    "name": "The Hollywood Reporter",
+    "status": "gr",
+    "urls": [
+      "hollywoodreporter.com"
+    ]
+  },
+  {
+    "name": "Hope not Hate",
+    "status": "nc",
+    "urls": [
+      "hopenothate.org.uk",
+      "searchlightmagazine.com"
+    ]
+  },
+  {
+    "name": "HuffPost",
+    "status": "gr",
+    "urls": [
+      "huffpost.com",
+      "huffingtonpost.com",
+      "huffingtonpost.co.uk",
+      "huffingtonpost.ca",
+      "huffingtonpost.com.au",
+      "huffpostbrasil.com",
+      "huffingtonpost.de",
+      "huffingtonpost.es",
+      "huffingtonpost.fr",
+      "huffingtonpost.gr",
+      "huffingtonpost.in",
+      "huffingtonpost.it",
+      "huffingtonpost.jp",
+      "huffingtonpost.kr",
+      "huffpostmaghreb.com",
+      "huffingtonpost.com.mx"
+    ]
+  },
+  {
+    "name": "Human Events",
+    "status": "nc",
+    "urls": [
+      "humanevents.com"
+    ]
+  },
+  {
+    "name": "Idolator (website)",
+    "status": "gr",
+    "urls": [
+      "idolator.com"
+    ]
+  },
+  {
+    "name": "IGN",
+    "status": "gr",
+    "urls": [
+      "ign.com"
+    ]
+  },
+  {
+    "name": "IMDb",
+    "status": "generally unreliable",
+    "urls": [
+      "imdb.com"
+    ]
+  },
+  {
+    "name": "iNaturalist",
+    "status": "generally unreliable",
+    "urls": [
+      "inaturalist.org"
+    ]
+  },
+  {
+    "name": "The Independent",
+    "status": "gr",
+    "urls": [
+      "independent.co.uk"
+    ]
+  },
+  {
+    "name": "Independent Journal Review",
+    "status": "nc",
+    "urls": [
+      "ijr.com"
+    ]
+  },
+  {
+    "name": "Independent Media Center",
+    "status": "generally unreliable",
+    "urls": [
+      "indymedia.org",
+      "imc-africa.mayfirst.org",
+      "indymedia.ie",
+      "indymedia.nl",
+      "indymedia.no",
+      "indymedia.org.uk",
+      "midiaindependente.org",
+      "indymediapr.org",
+      "bigmuddyimc.org",
+      "phillyimc.org",
+      "rogueimc.org",
+      "indybay.org",
+      "indymedia.us",
+      "ucimc.org",
+      "antwerpen-indymedia.be",
+      "michiganimc.org",
+      "tnimc.org"
+    ]
+  },
+  {
+    "name": "The Indian Express",
+    "status": "gr",
+    "urls": [
+      "indianexpress.com"
+    ]
+  },
+  {
+    "name": "Indiegogo",
+    "status": "reliable",
+    "urls": [
+      "indiegogo.com"
+    ]
+  },
+  {
+    "name": "Infowars",
+    "status": "reliable",
+    "urls": [
+      "infowars.com",
+      "infowars.net",
+      "infowars.tv",
+      "newswars.com",
+      "banned.video",
+      "nationalfile.com",
+      "prisonplanet.com"
+    ]
+  },
+  {
+    "name": "Inquisitr",
+    "status": "generally unreliable",
+    "urls": [
+      "inquisitr.com"
+    ]
+  },
+  {
+    "name": "Business Insider",
+    "status": "nc",
+    "urls": [
+      "insider.com",
+      "businessinsider.com",
+      "thisisinsider.com"
+    ]
+  },
+  {
+    "name": "Insider (news website)",
+    "status": "gr",
+    "urls": [
+      "insider.com",
+      "thisisinsider.com"
+    ]
+  },
+  {
+    "name": "Instagram",
+    "status": "generally unreliable",
+    "urls": [
+      "instagram.com"
+    ]
+  },
+  {
+    "name": "Inter Press Service",
+    "status": "gr",
+    "urls": [
+      "ipsnews.net",
+      "ipsnoticias.net",
+      "ipscuba.net"
+    ]
+  },
+  {
+    "name": "The Intercept",
+    "status": "gr",
+    "urls": [
+      "theintercept.com"
+    ]
+  },
+  {
+    "name": "International Business Times",
+    "status": "generally unreliable",
+    "urls": [
+      "ibtimes.com",
+      "ibtimes.com.au",
+      "ibtimes.com.cn",
+      "ibtimes.co.in",
+      "ibtimes.sg",
+      "ibtimes.co.uk"
+    ]
+  },
+  {
+    "name": "International Fact-Checking Network",
+    "status": "gr",
+    "urls": [
+      "ifcncodeofprinciples.poynter.org"
+    ]
+  },
+  {
+    "name": "Investopedia",
+    "status": "generally unreliable",
+    "urls": [
+      "investopedia.com"
+    ]
+  },
+  {
+    "name": "IslamQA.info",
+    "status": "nc",
+    "urls": [
+      "islamqa.info"
+    ]
+  },
+  {
+    "name": "Jacobin (magazine)",
+    "status": "nc",
+    "urls": [
+      "jacobinmag.com",
+      "catalyst-journal.com"
+    ]
+  },
+  {
+    "name": "JAMA",
+    "status": "gr",
+    "urls": [
+      "jamanetwork.com"
+    ]
+  },
+  {
+    "name": "Jeff Sneider",
+    "status": "gr",
+    "urls": [
+      "theinsneider.com",
+      "https://open.spotify.com/show/6D4W8XJFVJ15tvqAnbmwJH"
+    ]
+  },
+  {
+    "name": "The Jerusalem Post",
+    "status": "gr",
+    "urls": [
+      "jpost.com"
+    ]
+  },
+  {
+    "name": "The Jewish Chronicle",
+    "status": "nc",
+    "urls": [
+      "thejc.com"
+    ]
+  },
+  {
+    "name": "Jewish Virtual Library",
+    "status": "generally unreliable",
+    "urls": [
+      "jewishvirtuallibrary.org"
+    ]
+  },
+  {
+    "name": "Jezebel (website)",
+    "status": "nc",
+    "urls": [
+      "jezebel.com"
+    ]
+  },
+  {
+    "name": "Jihad Watch",
+    "status": "deprecated",
+    "urls": [
+      "jihadwatch.org"
+    ]
+  },
+  {
+    "name": "Joshua Project",
+    "status": "generally unreliable",
+    "urls": [
+      "joshuaproject.net",
+      "religjournal.com/pdf/ijrr11010.pdf"
+    ]
+  },
+  {
+    "name": "Journal of Scientific Exploration",
+    "status": "deprecated",
+    "urls": [
+      "journalofscientificexploration.org",
+      "scientificexploration.org"
+    ]
+  },
+  {
+    "name": "JRank",
+    "status": "generally unreliable",
+    "urls": [
+      "jrank.org"
+    ]
+  },
+  {
+    "name": "Kickstarter",
+    "status": "reliable",
+    "urls": [
+      "kickstarter.com"
+    ]
+  },
+  {
+    "name": "Kirkus Reviews",
+    "status": "gr",
+    "urls": [
+      "kirkusreviews.com"
+    ]
+  },
+  {
+    "name": "Know Your Meme",
+    "status": "generally unreliable",
+    "urls": [
+      "knowyourmeme.com"
+    ]
+  },
+  {
+    "name": "Kommersant",
+    "status": "gr",
+    "urls": [
+      "kommersant.ru",
+      "kommersant.com",
+      "kommersant.uk"
+    ]
+  },
+  {
+    "name": "Kotaku",
+    "status": "nc",
+    "urls": [
+      "kotaku.com",
+      "kotaku.com.au",
+      "kotaku.co.uk"
+    ]
+  },
+  {
+    "name": "LADbible",
+    "status": "generally unreliable",
+    "urls": [
+      "Ladbible.com"
+    ]
+  },
+  {
+    "name": "Land Transport Guru",
+    "status": "generally unreliable",
+    "urls": [
+      "landtransportguru.net"
+    ]
+  },
+  {
+    "name": "Last.fm",
+    "status": "deprecated",
+    "urls": [
+      "last.fm"
+    ]
+  },
+  {
+    "name": "Lenta.ru",
+    "status": "reliable",
+    "urls": [
+      "lenta.ru"
+    ]
+  },
+  {
+    "name": "LifeSiteNews",
+    "status": "deprecated",
+    "urls": [
+      "lifesitenews.com",
+      "lifesite.net"
+    ]
+  },
+  {
+    "name": "LinkedIn",
+    "status": "generally unreliable",
+    "urls": [
+      "linkedin.com"
+    ]
+  },
+  {
+    "name": "LionhearTV",
+    "status": "generally unreliable",
+    "urls": [
+      "lionheartv.net"
+    ]
+  },
+  {
+    "name": "LiveJournal",
+    "status": "generally unreliable",
+    "urls": [
+      "livejournal.com"
+    ]
+  },
+  {
+    "name": "LiveLeak",
+    "status": "reliable",
+    "urls": [
+      "liveleak.com"
+    ]
+  },
+  {
+    "name": "Los Angeles Times",
+    "status": "gr",
+    "urls": [
+      "latimes.com"
+    ]
+  },
+  {
+    "name": "Lulu.com",
+    "status": "reliable",
+    "urls": [
+      "lulu.com"
+    ]
+  },
+  {
+    "name": "LWN.net",
+    "status": "gr",
+    "urls": [
+      "lwn.net"
+    ]
+  },
+  {
+    "name": "Mail & Guardian",
+    "status": "gr",
+    "urls": [
+      "mg.co.za"
+    ]
+  },
+  {
+    "name": "The Mail on Sunday",
+    "status": "deprecated",
+    "urls": [
+      "mailonsunday.co.uk",
+      "mailonsunday.com",
+      "pressreader.com/uk/the-mail-on-sunday",
+      "pressreader.com/uk/the-scottish-mail-on-sunday",
+      "dailymail.co.uk/mailonsunday"
+    ]
+  },
+  {
+    "name": "Marquis Who's Who",
+    "status": "generally unreliable",
+    "urls": [
+      "marquiswhoswho.com",
+      "whoswhoinamerica.com"
+    ]
+  },
+  {
+    "name": "Mashable",
+    "status": "nc",
+    "urls": [
+      "mashable.com"
+    ]
+  },
+  {
+    "name": "The Mary Sue",
+    "status": "gr",
+    "urls": [
+      "themarysue.com"
+    ]
+  },
+  {
+    "name": "MDPI",
+    "status": "nc",
+    "urls": [
+      "mdpi.com"
+    ]
+  },
+  {
+    "name": "MEAWW <small>(Media Entertainment Arts WorldWide)</small>",
+    "status": "generally unreliable",
+    "urls": [
+      "meaww.com"
+    ]
+  },
+  {
+    "name": "Media Bias/Fact Check",
+    "status": "generally unreliable",
+    "urls": [
+      "mediabiasfactcheck.com"
+    ]
+  },
+  {
+    "name": "Media Matters for America",
+    "status": "nc",
+    "urls": [
+      "mediamatters.org"
+    ]
+  },
+  {
+    "name": "Media Research Center",
+    "status": "generally unreliable",
+    "urls": [
+      "mrc.org",
+      "cnsnews.com",
+      "mrctv.org",
+      "newsbusters.org"
+    ]
+  },
+  {
+    "name": "Mediaite",
+    "status": "nc",
+    "urls": [
+      "mediaite.com"
+    ]
+  },
+  {
+    "name": "Medium (website)",
+    "status": "generally unreliable",
+    "urls": [
+      "medium.com"
+    ]
+  },
+  {
+    "name": "Meduza",
+    "status": "gr",
+    "urls": [
+      "meduza.io"
+    ]
+  },
+  {
+    "name": "Metacritic",
+    "status": "gr",
+    "urls": [
+      "metacritic.com",
+      "gamerankings.com"
+    ]
+  },
+  {
+    "name": "Metal-experience.com",
+    "status": "generally unreliable",
+    "urls": [
+      "metal-experience.com"
+    ]
+  },
+  {
+    "name": "MetalSucks",
+    "status": "nc",
+    "urls": [
+      "metalsucks.net"
+    ]
+  },
+  {
+    "name": "Metro (British newspaper)",
+    "status": "generally unreliable",
+    "urls": [
+      "metro.co.uk",
+      "metro.news"
+    ]
+  },
+  {
+    "name": "Middle East Media Research Institute",
+    "status": "nc",
+    "urls": [
+      "memri.org",
+      "memritv.org"
+    ]
+  },
+  {
+    "name": "Middle East Monitor",
+    "status": "nc",
+    "urls": [
+      "middleeastmonitor.com"
+    ]
+  },
+  {
+    "name": "MintPress News",
+    "status": "deprecated",
+    "urls": [
+      "mintpressnews.com",
+      "mintpressnews.cn",
+      "mintpressnews.ru",
+      "mintpressnews.es"
+    ]
+  },
+  {
+    "name": "Le Monde diplomatique",
+    "status": "gr",
+    "urls": [
+      "monde-diplomatique.fr",
+      "mondediplo.com"
+    ]
+  },
+  {
+    "name": "Mondoweiss",
+    "status": "nc",
+    "urls": [
+      "mondoweiss.net"
+    ]
+  },
+  {
+    "name": "Morning Star (British newspaper)",
+    "status": "nc",
+    "urls": [
+      "morningstaronline.co.uk"
+    ]
+  },
+  {
+    "name": "Mother Jones (magazine)",
+    "status": "gr",
+    "urls": [
+      "motherjones.com"
+    ]
+  },
+  {
+    "name": "MS NOW",
+    "status": "gr",
+    "urls": [
+      "msnbc.com"
+    ]
+  },
+  {
+    "name": "MyLife",
+    "status": "reliable",
+    "urls": [
+      "mylife.com",
+      "reunion.com"
+    ]
+  },
+  {
+    "name": "The Nation",
+    "status": "gr",
+    "urls": [
+      "thenation.com"
+    ]
+  },
+  {
+    "name": "National Enquirer",
+    "status": "deprecated",
+    "urls": [
+      "nationalenquirer.com"
+    ]
+  },
+  {
+    "name": "National Geographic",
+    "status": "gr",
+    "urls": [
+      "nationalgeographic.com"
+    ]
+  },
+  {
+    "name": "National Post",
+    "status": "gr",
+    "urls": [
+      "nationalpost.com"
+    ]
+  },
+  {
+    "name": "National Review",
+    "status": "nc",
+    "urls": [
+      "nationalreview.com"
+    ]
+  },
+  {
+    "name": "Natural News",
+    "status": "reliable",
+    "urls": [
+      "naturalnews.com",
+      "newstarget.com"
+    ]
+  },
+  {
+    "name": "NBC News",
+    "status": "gr",
+    "urls": [
+      "nbcnews.com"
+    ]
+  },
+  {
+    "name": "The Needle Drop",
+    "status": "nc",
+    "urls": [
+      "theneedledrop.com"
+    ]
+  },
+  {
+    "name": "The New American",
+    "status": "generally unreliable",
+    "urls": [
+      "thenewamerican.com"
+    ]
+  },
+  {
+    "name": "New Eastern Outlook",
+    "status": "deprecated",
+    "urls": [
+      "journal-neo.org"
+    ]
+  },
+  {
+    "name": "The New Republic",
+    "status": "gr",
+    "urls": [
+      "newrepublic.com"
+    ]
+  },
+  {
+    "name": "New York (magazine)",
+    "status": "gr",
+    "urls": [
+      "nymag.com",
+      "vulture.com",
+      "thecut.com",
+      "grubstreet.com"
+    ]
+  },
+  {
+    "name": "New York Daily News",
+    "status": "gr",
+    "urls": [
+      "nydailynews.com"
+    ]
+  },
+  {
+    "name": "New York Post",
+    "status": "generally unreliable",
+    "urls": [
+      "nypost.com",
+      "pagesix.com"
+    ]
+  },
+  {
+    "name": "The New York Times",
+    "status": "gr",
+    "urls": [
+      "nytimes.com"
+    ]
+  },
+  {
+    "name": "The New Yorker",
+    "status": "gr",
+    "urls": [
+      "newyorker.com"
+    ]
+  },
+  {
+    "name": "The New Zealand Herald",
+    "status": "gr",
+    "urls": [
+      "nzherald.co.nz"
+    ]
+  },
+  {
+    "name": "News of the World",
+    "status": "deprecated",
+    "urls": [
+      "newsoftheworld.co.uk",
+      "newsoftheworld.com"
+    ]
+  },
+  {
+    "name": "NewsBlaze",
+    "status": "deprecated",
+    "urls": [
+      "newsblaze.com",
+      "newsblaze.com.au"
+    ]
+  },
+  {
+    "name": "NewsBreak",
+    "status": "deprecated",
+    "urls": [
+      "newsbreak.com"
+    ]
+  },
+  {
+    "name": "NewsFront (website)",
+    "status": "reliable",
+    "urls": [
+      "news-front.su",
+      "news-front.info"
+    ]
+  },
+  {
+    "name": "Newslaundry",
+    "status": "gr",
+    "urls": [
+      "newslaundry.com"
+    ]
+  },
+  {
+    "name": "Newsmax",
+    "status": "deprecated",
+    "urls": [
+      "newsmax.com",
+      "newsmaxtv.com"
+    ]
+  },
+  {
+    "name": "NewsNation",
+    "status": "gr",
+    "urls": [
+      "newsnationnow.com"
+    ]
+  },
+  {
+    "name": "Newsweek",
+    "status": "gr",
+    "urls": [
+      "newsweek.com"
+    ]
+  },
+  {
+    "name": "The Next Web",
+    "status": "nc",
+    "urls": [
+      "thenextweb.com"
+    ]
+  },
+  {
+    "name": "NGO Monitor",
+    "status": "generally unreliable",
+    "urls": [
+      "ngo-monitor.org"
+    ]
+  },
+  {
+    "name": "NME",
+    "status": "gr",
+    "urls": [
+      "nme.com"
+    ]
+  },
+  {
+    "name": "NNDB",
+    "status": "deprecated",
+    "urls": [
+      "nndb.com"
+    ]
+  },
+  {
+    "name": "NPR",
+    "status": "gr",
+    "urls": [
+      "npr.org"
+    ]
+  },
+  {
+    "name": "Occupy Democrats",
+    "status": "deprecated",
+    "urls": [
+      "occupydemocrats.com",
+      "washingtonpress.com"
+    ]
+  },
+  {
+    "name": "Radio y Televisión Martí",
+    "status": "deprecated",
+    "urls": [
+      "martinoticias.com"
+    ]
+  },
+  {
+    "name": "OKO.press",
+    "status": "gr",
+    "urls": [
+      "oko.press"
+    ]
+  },
+  {
+    "name": "One America News Network",
+    "status": "deprecated",
+    "urls": [
+      "oann.com"
+    ]
+  },
+  {
+    "name": "The Onion",
+    "status": "generally unreliable",
+    "urls": [
+      "theonion.com"
+    ]
+  },
+  {
+    "name": "OpIndia",
+    "status": "reliable",
+    "urls": [
+      "opindia.com",
+      "opindia.in"
+    ]
+  },
+  {
+    "name": "Our Campaigns",
+    "status": "generally unreliable",
+    "urls": [
+      "ourcampaigns.com"
+    ]
+  },
+  {
+    "name": "PanAm Post",
+    "status": "generally unreliable",
+    "urls": [
+      "panampost.com"
+    ]
+  },
+  {
+    "name": "Patheos",
+    "status": "generally unreliable",
+    "urls": [
+      "patheos.com"
+    ]
+  },
+  {
+    "name": "La Patilla",
+    "status": "nc",
+    "urls": [
+      "lapatilla.com"
+    ]
+  },
+  {
+    "name": "PBS",
+    "status": "gr",
+    "urls": [
+      "pbs.org"
+    ]
+  },
+  {
+    "name": "Peerage",
+    "status": "deprecated",
+    "urls": []
+  },
+  {
+    "name": "People (magazine)",
+    "status": "gr",
+    "urls": [
+      "people.com"
+    ]
+  },
+  {
+    "name": "People Make Games",
+    "status": "gr",
+    "urls": []
+  },
+  {
+    "name": "Pew Research Center",
+    "status": "gr",
+    "urls": [
+      "pewresearch.org",
+      "people-press.org",
+      "journalism.org",
+      "pewsocialtrends.org",
+      "pewforum.org",
+      "pewinternet.org",
+      "pewhispanic.org",
+      "pewglobal.org"
+    ]
+  },
+  {
+    "name": "An Phoblacht",
+    "status": "generally unreliable",
+    "urls": [
+      "anphoblacht.com"
+    ]
+  },
+  {
+    "name": "Pinkvilla",
+    "status": "generally unreliable",
+    "urls": [
+      "pinkvilla.com"
+    ]
+  },
+  {
+    "name": "PinkNews",
+    "status": "gr",
+    "urls": [
+      "pinknews.co.uk"
+    ]
+  },
+  {
+    "name": "Planespotters.net",
+    "status": "generally unreliable",
+    "urls": [
+      "planespotters.net"
+    ]
+  },
+  {
+    "name": "Playboy",
+    "status": "gr",
+    "urls": [
+      "playboy.com"
+    ]
+  },
+  {
+    "name": "The Points Guy",
+    "status": "reliable",
+    "urls": [
+      "thepointsguy.com/news",
+      "thepointsguy.com/reviews"
+    ]
+  },
+  {
+    "name": "Politico",
+    "status": "gr",
+    "urls": [
+      "politico.com"
+    ]
+  },
+  {
+    "name": "PolitiFact",
+    "status": "gr",
+    "urls": [
+      "politifact.com"
+    ]
+  },
+  {
+    "name": "Polygon (website)",
+    "status": "gr",
+    "urls": [
+      "polygon.com"
+    ]
+  },
+  {
+    "name": "Popular Mechanics",
+    "status": "nc",
+    "urls": [
+      "popularmechanics.com"
+    ]
+  },
+  {
+    "name": "The Post Millennial",
+    "status": "generally unreliable",
+    "urls": [
+      "thepostmillennial.com"
+    ]
+  },
+  {
+    "name": "PR Newswire",
+    "status": "generally unreliable",
+    "urls": [
+      "prnewswire.com",
+      "prnewswire.co.uk"
+    ]
+  },
+  {
+    "name": "Preprint",
+    "status": "generally unreliable",
+    "urls": [
+      "arxiv.org",
+      "biorxiv.org",
+      "medrxiv.org"
+    ]
+  },
+  {
+    "name": "Press TV",
+    "status": "deprecated",
+    "urls": [
+      "presstv.com",
+      "presstv.ir",
+      "presstv.co.uk",
+      "presstv.tv"
+    ]
+  },
+  {
+    "name": "Pride.com",
+    "status": "nc",
+    "urls": [
+      "pride.com"
+    ]
+  },
+  {
+    "name": "Project Veritas",
+    "status": "reliable",
+    "urls": [
+      "projectveritas.com",
+      "okeefemediagroup.com"
+    ]
+  },
+  {
+    "name": "ProPublica",
+    "status": "gr",
+    "urls": [
+      "propublica.org"
+    ]
+  },
+  {
+    "name": "Quackwatch",
+    "status": "nc",
+    "urls": [
+      "quackwatch.org"
+    ]
+  },
+  {
+    "name": "Quadrant (magazine)",
+    "status": "generally unreliable",
+    "urls": [
+      "quadrant.org.au"
+    ]
+  },
+  {
+    "name": "Quillette",
+    "status": "generally unreliable",
+    "urls": [
+      "quillette.com"
+    ]
+  },
+  {
+    "name": "Quora",
+    "status": "generally unreliable",
+    "urls": [
+      "quora.com"
+    ]
+  },
+  {
+    "name": "Radio Free Asia",
+    "status": "gr",
+    "urls": [
+      "rfa.org"
+    ]
+  },
+  {
+    "name": "Radio Free Europe/Radio Liberty",
+    "status": "nc",
+    "urls": [
+      "rferl.org"
+    ]
+  },
+  {
+    "name": "Rappler",
+    "status": "gr",
+    "urls": [
+      "rappler.com"
+    ]
+  },
+  {
+    "name": "Rate Your Music",
+    "status": "deprecated",
+    "urls": [
+      "rateyourmusic.com",
+      "cinemos.com",
+      "glitchwave.com",
+      "sonemic.com"
+    ]
+  },
+  {
+    "name": "Raw Story",
+    "status": "generally unreliable",
+    "urls": [
+      "rawstory.com"
+    ]
+  },
+  {
+    "name": "RealClearPolitics",
+    "status": "nc",
+    "urls": [
+      "realclearpolitics.com",
+      "realclearinvestigations.com"
+    ]
+  },
+  {
+    "name": "Reason (magazine)",
+    "status": "gr",
+    "urls": [
+      "reason.com"
+    ]
+  },
+  {
+    "name": "Red Ventures",
+    "status": "generally unreliable",
+    "urls": []
+  },
+  {
+    "name": "Reddit",
+    "status": "generally unreliable",
+    "urls": [
+      "reddit.com"
+    ]
+  },
+  {
+    "name": "RedState",
+    "status": "generally unreliable",
+    "urls": [
+      "redstate.com"
+    ]
+  },
+  {
+    "name": "The Register",
+    "status": "gr",
+    "urls": [
+      "theregister.co.uk",
+      "theregister.com"
+    ]
+  },
+  {
+    "name": "scriptural texts",
+    "status": "generally unreliable",
+    "urls": []
+  },
+  {
+    "name": "Republic TV",
+    "status": "deprecated",
+    "urls": [
+      "republicworld.com",
+      "republicbharat.com"
+    ]
+  },
+  {
+    "name": "Reuters",
+    "status": "gr",
+    "urls": [
+      "reuters.com"
+    ]
+  },
+  {
+    "name": "RhythmOne",
+    "status": "nc",
+    "urls": [
+      "allmusic.com",
+      "allmovie.com",
+      "allgame.com"
+    ]
+  },
+  {
+    "name": "RIA Novosti",
+    "status": "nc",
+    "urls": [
+      "rian.ru",
+      "rian.com.ua"
+    ]
+  },
+  {
+    "name": "Rolling Stone",
+    "status": "gr",
+    "urls": [
+      "rollingstone.com"
+    ]
+  },
+  {
+    "name": "Rotten Tomatoes",
+    "status": "gr",
+    "urls": [
+      "rottentomatoes.com"
+    ]
+  },
+  {
+    "name": "RTÉ",
+    "status": "gr",
+    "urls": [
+      "rte.ie/"
+    ]
+  },
+  {
+    "name": "Salon.com",
+    "status": "nc",
+    "urls": [
+      "salon.com"
+    ]
+  },
+  {
+    "name": "Science-Based Medicine",
+    "status": "nc",
+    "urls": [
+      "sciencebasedmedicine.org"
+    ]
+  },
+  {
+    "name": "ScienceBlogs",
+    "status": "nc",
+    "urls": [
+      "scienceblogs.com"
+    ]
+  },
+  {
+    "name": "ScienceDirect",
+    "status": "generally unreliable",
+    "urls": [
+      "sciencedirect.com/topics/"
+    ]
+  },
+  {
+    "name": "Scientific American",
+    "status": "gr",
+    "urls": [
+      "scientificamerican.com"
+    ]
+  },
+  {
+    "name": "SCOTUSblog",
+    "status": "gr",
+    "urls": [
+      "scotusblog.com"
+    ]
+  },
+  {
+    "name": "Screen Rant",
+    "status": "nc",
+    "urls": [
+      "screenrant.com"
+    ]
+  },
+  {
+    "name": "Scribd",
+    "status": "generally unreliable",
+    "urls": [
+      "scribd.com"
+    ]
+  },
+  {
+    "name": "Sherdog",
+    "status": "nc",
+    "urls": [
+      "sherdog.com"
+    ]
+  },
+  {
+    "name": "''Simple Flying''",
+    "status": "deprecated",
+    "urls": [
+      "simpleflying.com"
+    ]
+  },
+  {
+    "name": "Sixth Tone",
+    "status": "gr",
+    "urls": [
+      "sixthtone.com"
+    ]
+  },
+  {
+    "name": "The Skeptic's Dictionary",
+    "status": "nc",
+    "urls": [
+      "skepdic.com"
+    ]
+  },
+  {
+    "name": "Skeptical Inquirer",
+    "status": "gr",
+    "urls": [
+      "skepticalinquirer.org"
+    ]
+  },
+  {
+    "name": "The Skwawkbox",
+    "status": "generally unreliable",
+    "urls": [
+      "skwawkbox.org"
+    ]
+  },
+  {
+    "name": "Sky News Australia",
+    "status": "nc",
+    "urls": [
+      "skynews.com.au"
+    ]
+  },
+  {
+    "name": "Sky News",
+    "status": "gr",
+    "urls": [
+      "news.sky.com"
+    ]
+  },
+  {
+    "name": "Snopes",
+    "status": "gr",
+    "urls": [
+      "snopes.com"
+    ]
+  },
+  {
+    "name": "Social Blade",
+    "status": "nc",
+    "urls": [
+      "socialblade.com"
+    ]
+  },
+  {
+    "name": "SourceWatch",
+    "status": "generally unreliable",
+    "urls": [
+      "sourcewatch.org"
+    ]
+  },
+  {
+    "name": "The South African",
+    "status": "nc",
+    "urls": [
+      "thesouthafrican.com"
+    ]
+  },
+  {
+    "name": "South China Morning Post",
+    "status": "gr",
+    "urls": [
+      "scmp.com"
+    ]
+  },
+  {
+    "name": "Southern Poverty Law Center",
+    "status": "gr",
+    "urls": [
+      "splcenter.org"
+    ]
+  },
+  {
+    "name": "SouthFront",
+    "status": "reliable",
+    "urls": [
+      "southfront.org",
+      "southfront.press"
+    ]
+  },
+  {
+    "name": "Space.com",
+    "status": "gr",
+    "urls": [
+      "space.com"
+    ]
+  },
+  {
+    "name": "SparkNotes",
+    "status": "nc",
+    "urls": [
+      "sparknotes.com"
+    ]
+  },
+  {
+    "name": "The Spectator",
+    "status": "nc",
+    "urls": [
+      "spectator.co.uk",
+      "spectator.us"
+    ]
+  },
+  {
+    "name": "Der Spiegel",
+    "status": "gr",
+    "urls": [
+      "spiegel.de"
+    ]
+  },
+  {
+    "name": "Spirit of Metal",
+    "status": "generally unreliable",
+    "urls": [
+      "spirit-of-metal.com"
+    ]
+  },
+  {
+    "name": "Sports Illustrated",
+    "status": "gr",
+    "urls": [
+      "si.com"
+    ]
+  },
+  {
+    "name": "Sportskeeda",
+    "status": "generally unreliable",
+    "urls": [
+      "sportskeeda.com"
+    ]
+  },
+  {
+    "name": "Sputnik (news agency)",
+    "status": "deprecated",
+    "urls": [
+      "sputniknews.com",
+      "voiceofrussia.com",
+      "sputniknews.ru",
+      "sputnik.by",
+      "armeniasputnik.am",
+      "sputnik.kz",
+      "sputniknews.cn",
+      "sputnik.md",
+      "sputnik-georgia.com",
+      "sputnik-georgia.ru",
+      "sputnik-abkhazia.ru",
+      "sputnik-abkhazia.info",
+      "sputnik-ossetia.com",
+      "sputnik-ossetia.ru",
+      "sputniknewslv.com",
+      "sputniknews.lt",
+      "sputniknews.lat",
+      "latamnews.lat",
+      "sputniknews.gr",
+      "sputniknews-uz.com",
+      "sputniknews.uz",
+      "sputnik-tj.com",
+      "sputnik.az",
+      "sputnik.kg",
+      "sputnikglobe.com",
+      "radiosputnik.ria.ru",
+      "sputniknews.in",
+      "sputniknews.africa",
+      "sputnikportal.rs",
+      "sputnikmediabank.com",
+      "sarabic.ae"
+    ]
+  },
+  {
+    "name": "Stack Exchange",
+    "status": "generally unreliable",
+    "urls": [
+      "stackexchange.com",
+      "stackoverflow.com",
+      "serverfault.com",
+      "superuser.com",
+      "askubuntu.com",
+      "mathoverflow.net"
+    ]
+  },
+  {
+    "name": "StarsUnfolded",
+    "status": "generally unreliable",
+    "urls": [
+      "starsunfolded.com"
+    ]
+  },
+  {
+    "name": "Statista",
+    "status": "generally unreliable",
+    "urls": [
+      "statista.com"
+    ]
+  },
+  {
+    "name": "The Straits Times",
+    "status": "gr",
+    "urls": [
+      "straitstimes.com"
+    ]
+  },
+  {
+    "name": "The Sun (United Kingdom)",
+    "status": "deprecated",
+    "urls": [
+      "thesun.co.uk",
+      "thesun.ie",
+      "thescottishsun.co.uk",
+      "the-sun.com",
+      "thesun.mobi",
+      "sunnation.co.uk",
+      "dreamteamfc.com",
+      "page3.com"
+    ]
+  },
+  {
+    "name": "Swarajya (magazine)",
+    "status": "reliable",
+    "urls": [
+      "swarajyamag.com"
+    ]
+  },
+  {
+    "name": "The Sydney Morning Herald",
+    "status": "gr",
+    "urls": [
+      "smh.com.au"
+    ]
+  },
+  {
+    "name": "Taki's Magazine",
+    "status": "deprecated",
+    "urls": [
+      "takimag.com"
+    ]
+  },
+  {
+    "name": "Tasnim News Agency",
+    "status": "deprecated",
+    "urls": [
+      "tasnimnews.com",
+      "tn.ai"
+    ]
+  },
+  {
+    "name": "TASS",
+    "status": "generally unreliable",
+    "urls": [
+      "tass.com",
+      "tass.ru"
+    ]
+  },
+  {
+    "name": "TechCrunch",
+    "status": "nc",
+    "urls": [
+      "techcrunch.com"
+    ]
+  },
+  {
+    "name": "TED (conference)",
+    "status": "nc",
+    "urls": [
+      "ted.com"
+    ]
+  },
+  {
+    "name": "Telesur",
+    "status": "deprecated",
+    "urls": [
+      "telesurtv.net",
+      "telesurenglish.net"
+    ]
+  },
+  {
+    "name": "ThinkProgress",
+    "status": "nc",
+    "urls": [
+      "thinkprogress.org"
+    ]
+  },
+  {
+    "name": "Time (magazine)",
+    "status": "gr",
+    "urls": [
+      "time.com"
+    ]
+  },
+  {
+    "name": "The Times",
+    "status": "gr",
+    "urls": [
+      "thetimes.com",
+      "thetimes.co.uk",
+      "thesundaytimes.co.uk",
+      "timesonline.co.uk"
+    ]
+  },
+  {
+    "name": "The Times of Israel",
+    "status": "gr",
+    "urls": [
+      "timesofisrael.com"
+    ]
+  },
+  {
+    "name": "The Times of India",
+    "status": "nc",
+    "urls": [
+      "timesofindia.com",
+      "timesofindia.indiatimes.com"
+    ]
+  },
+  {
+    "name": "TMZ",
+    "status": "nc",
+    "urls": [
+      "tmz.com"
+    ]
+  },
+  {
+    "name": "TorrentFreak",
+    "status": "gr",
+    "urls": [
+      "torrentfreak.com"
+    ]
+  },
+  {
+    "name": "Town and Village Guide (UK)",
+    "status": "generally unreliable",
+    "urls": [
+      "townandvillageguide.com"
+    ]
+  },
+  {
+    "name": "Townhall",
+    "status": "nc",
+    "urls": [
+      "townhall.com"
+    ]
+  },
+  {
+    "name": "TRT World",
+    "status": "nc",
+    "urls": [
+      "trtworld.com"
+    ]
+  },
+  {
+    "name": "The Truth About Guns",
+    "status": "generally unreliable",
+    "urls": [
+      "thetruthaboutguns.com"
+    ]
+  },
+  {
+    "name": "TV.com",
+    "status": "generally unreliable",
+    "urls": [
+      "TV.com"
+    ]
+  },
+  {
+    "name": "TV Guide",
+    "status": "gr",
+    "urls": [
+      "tvguide.com",
+      "tvguidemagazine.com"
+    ]
+  },
+  {
+    "name": "TV Tropes",
+    "status": "generally unreliable",
+    "urls": [
+      "tvtropes.org"
+    ]
+  },
+  {
+    "name": "Twitter",
+    "status": "generally unreliable",
+    "urls": [
+      "twitter.com"
+    ]
+  },
+  {
+    "name": "The Unz Review",
+    "status": "deprecated",
+    "urls": [
+      "unz.com",
+      "unz.org"
+    ]
+  },
+  {
+    "name": "Urban Dictionary",
+    "status": "generally unreliable",
+    "urls": [
+      "urbandictionary.com"
+    ]
+  },
+  {
+    "name": "U.S. News & World Report",
+    "status": "gr",
+    "urls": [
+      "usnews.com"
+    ]
+  },
+  {
+    "name": "Us Weekly",
+    "status": "nc",
+    "urls": [
+      "usmagazine.com"
+    ]
+  },
+  {
+    "name": "USA Today",
+    "status": "gr",
+    "urls": [
+      "usatoday.com",
+      "usatoday.com/story/special/contributor-content"
+    ]
+  },
+  {
+    "name": "Vanity Fair (magazine)",
+    "status": "gr",
+    "urls": [
+      "vanityfair.com"
+    ]
+  },
+  {
+    "name": "Variety (magazine)",
+    "status": "gr",
+    "urls": [
+      "variety.com"
+    ]
+  },
+  {
+    "name": "VDARE",
+    "status": "deprecated",
+    "urls": [
+      "vdare.com"
+    ]
+  },
+  {
+    "name": "Venezuelanalysis",
+    "status": "generally unreliable",
+    "urls": [
+      "venezuelanalysis.com"
+    ]
+  },
+  {
+    "name": "VentureBeat",
+    "status": "nc",
+    "urls": [
+      "venturebeat.com"
+    ]
+  },
+  {
+    "name": "The Verge",
+    "status": "gr",
+    "urls": [
+      "theverge.com"
+    ]
+  },
+  {
+    "name": "Veterans Today",
+    "status": "reliable",
+    "urls": [
+      "veteranstoday.com",
+      "vtforeignpolicy.com"
+    ]
+  },
+  {
+    "name": "VGChartz",
+    "status": "generally unreliable",
+    "urls": [
+      "vgchartz.com"
+    ]
+  },
+  {
+    "name": "Vice Media",
+    "status": "nc",
+    "urls": [
+      "vice.com",
+      "refinery29.com",
+      "vicetv.com"
+    ]
+  },
+  {
+    "name": "Victims of Communism Memorial Foundation",
+    "status": "generally unreliable",
+    "urls": [
+      "victimsofcommunism.org"
+    ]
+  },
+  {
+    "name": "The Village Voice",
+    "status": "gr",
+    "urls": [
+      "villagevoice.com"
+    ]
+  },
+  {
+    "name": "Vogue (magazine)",
+    "status": "gr",
+    "urls": [
+      "vogue.com"
+    ]
+  },
+  {
+    "name": "Voice of America",
+    "status": "gr",
+    "urls": [
+      "voanews.com"
+    ]
+  },
+  {
+    "name": "Voltaire Network",
+    "status": "deprecated",
+    "urls": [
+      "voltairenet.org"
+    ]
+  },
+  {
+    "name": "Vox (website)",
+    "status": "gr",
+    "urls": [
+      "vox.com"
+    ]
+  },
+  {
+    "name": "The Wall Street Journal",
+    "status": "gr",
+    "urls": [
+      "wsj.com"
+    ]
+  },
+  {
+    "name": "Washington Examiner",
+    "status": "nc",
+    "urls": [
+      "washingtonexaminer.com"
+    ]
+  },
+  {
+    "name": "The Washington Free Beacon",
+    "status": "generally unreliable",
+    "urls": [
+      "freebeacon.com"
+    ]
+  },
+  {
+    "name": "The Washington Post",
+    "status": "gr",
+    "urls": [
+      "washingtonpost.com"
+    ]
+  },
+  {
+    "name": "The Washington Times",
+    "status": "nc",
+    "urls": [
+      "washingtontimes.com"
+    ]
+  },
+  {
+    "name": "WatchMojo",
+    "status": "generally unreliable",
+    "urls": [
+      "watchmojo.com"
+    ]
+  },
+  {
+    "name": "Weather2Travel.com",
+    "status": "generally unreliable",
+    "urls": [
+      "weather2travel.com"
+    ]
+  },
+  {
+    "name": "The Weekly Standard",
+    "status": "gr",
+    "urls": [
+      "weeklystandard.com"
+    ]
+  },
+  {
+    "name": "The Western Journal",
+    "status": "generally unreliable",
+    "urls": [
+      "westernjournal.com"
+    ]
+  },
+  {
+    "name": "''We Got This Covered''",
+    "status": "generally unreliable",
+    "urls": [
+      "wegotthiscovered.com"
+    ]
+  },
+  {
+    "name": "Wen Wei Po",
+    "status": "deprecated",
+    "urls": [
+      "wenweipo.com"
+    ]
+  },
+  {
+    "name": "WhatCulture",
+    "status": "generally unreliable",
+    "urls": [
+      "whatculture.com"
+    ]
+  },
+  {
+    "name": "Who's Who (UK)",
+    "status": "generally unreliable",
+    "urls": [
+      "ukwhoswho.com"
+    ]
+  },
+  {
+    "name": "WhoSampled",
+    "status": "generally unreliable",
+    "urls": [
+      "whosampled.com"
+    ]
+  },
+  {
+    "name": "Wikidata",
+    "status": "generally unreliable",
+    "urls": [
+      "wikidata.org"
+    ]
+  },
+  {
+    "name": "WikiLeaks",
+    "status": "generally unreliable",
+    "urls": [
+      "wikileaks.org"
+    ]
+  },
+  {
+    "name": "Wikinews",
+    "status": "generally unreliable",
+    "urls": [
+      "wikinews.org"
+    ]
+  },
+  {
+    "name": "Wikipedia",
+    "status": "generally unreliable",
+    "urls": [
+      "wikipedia.org"
+    ]
+  },
+  {
+    "name": "The Wire (India)",
+    "status": "gr",
+    "urls": [
+      "thewire.in",
+      "thewirehindi.com",
+      "thewireurdu.com"
+    ]
+  },
+  {
+    "name": "Wired (magazine)",
+    "status": "gr",
+    "urls": [
+      "wired.com",
+      "wired.co.uk"
+    ]
+  },
+  {
+    "name": "WordPress.com",
+    "status": "generally unreliable",
+    "urls": [
+      "wordpress.com"
+    ]
+  },
+  {
+    "name": "World Christian Encyclopedia",
+    "status": "nc",
+    "urls": [
+      "worldchristiandatabase.org",
+      "referenceworks.brillonline.com/entries/world-christian-encyclopedia-online",
+      "worldreligiondatabase.org"
+    ]
+  },
+  {
+    "name": "WorldNetDaily",
+    "status": "deprecated",
+    "urls": [
+      "wnd.com",
+      "worldnetdaily.com"
+    ]
+  },
+  {
+    "name": "Worldometer",
+    "status": "generally unreliable",
+    "urls": [
+      "worldometers.info"
+    ]
+  },
+  {
+    "name": "World Socialist Web Site",
+    "status": "nc",
+    "urls": [
+      "wsws.org"
+    ]
+  },
+  {
+    "name": "TheWrap",
+    "status": "gr",
+    "urls": [
+      "thewrap.com"
+    ]
+  },
+  {
+    "name": "XBIZ",
+    "status": "nc",
+    "urls": [
+      "xbiz.com"
+    ]
+  },
+  {
+    "name": "Xinhua News Agency",
+    "status": "nc",
+    "urls": [
+      "xinhuanet.com",
+      "news.cn"
+    ]
+  },
+  {
+    "name": "Yahoo! News",
+    "status": "gr",
+    "urls": [
+      "news.yahoo.com"
+    ]
+  },
+  {
+    "name": "YouTube",
+    "status": "generally unreliable",
+    "urls": [
+      "youtube.com"
+    ]
+  },
+  {
+    "name": "ZDNET",
+    "status": "gr",
+    "urls": [
+      "zdnet.com"
+    ]
+  },
+  {
+    "name": "Zero Hedge",
+    "status": "deprecated",
+    "urls": [
+      "zerohedge.com"
+    ]
+  },
+  {
+    "name": "ZoomInfo",
+    "status": "reliable",
+    "urls": [
+      "zoominfo.com"
+    ]
+  }
+]

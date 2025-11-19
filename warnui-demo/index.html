@@ -8,17 +8,20 @@
       body {
         font-family: sans-serif;
         margin: 20px;
-        display: flex;
-        flex-direction: column;
       }
-      body > * {
+      body > div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      body > div > div {
         width: 100%;
       }
     </style>
   </head>
   <body>
     <h1>wikishield revert and warn demo</h1>
-    <div style="display: flex; flex-direction: row; width: 100%">
+    <div>
       <div style="width: 100%">
         existing warning level:
         <input
@@ -39,18 +42,18 @@
       </div>
       <div style="width: 100%">
         <h2>how to use</h2>
-        dd4 - if user hasn’t been warned before, 4im disruption warn. if user
+        dd4 - if user hasn't been warned before, 4im disruption warn. if user
         has been warned before, then a 4 disruption warn.
         <br />
         href1 - gives user a level 1 warning for link spam
         <br />
-        van. - “.” means autodetect, so if user hasn’t been warned before, will
-        give them a lvl 1 vandalism warn. (“van” is an alias of vandalism, as is
-        “ruin”)
+        van. - "." means autodetect, so if user hasn't been warned before, will
+        give them a lvl 1 vandalism warn. ("van" is an alias of vandalism, as is
+        "ruin")
         <br />
         one can manually give 4im warnings, even if user has existing warnings,
         using the following syntax:<br />
-        ad! - “!” means 4im, so 4im advertising warning
+        ad! - "!" means 4im, so 4im advertising warning
 
         <br /><b>special command: </b><code> cls</code> - clears log and sets
         warning level to 0
