@@ -230,7 +230,11 @@
             <a href="https://en.wikipedia.org/wiki/WP:TEAHOUSE">teahouse</a>
             to ask more experienced editors for help.
           </p>
+          <p>
+            You may still create a draft, but be cautioned that without established notability, your draft may be <b>denied</b> or <b>deleted</b>.
+          </p>
           <button id="restart_blp1e">start demo over</button>
+          <button id="create_draft_blp1e" disabled>create draft anyway (<span id="timer_blp1e">10</span>)</button>
         </div>
         <div id="fail_poor_sources" class="step">
           <p>
@@ -243,11 +247,15 @@
             <a href="https://en.wikipedia.org/wiki/WP:TEAHOUSE">teahouse</a>
             to ask more experienced editors for help.
           </p>
+          <p>
+            You may still create a draft, but be cautioned that without established notability, your draft may be <b>denied</b> or <b>deleted</b>.
+          </p>
           <button id="restart_sources">start demo over</button>
+          <button id="create_draft_sources" disabled>create draft anyway (<span id="timer_sources">10</span>)</button>
         </div>
         <div id="success" class="step">
           <p>
-            congratulations! This subject is notable enough to merit an article
+            congratulations! This subject is likely notable enough to merit an article
             on wikipedia.
           </p>
           <p>You can now submit your article to wikipedia.</p>
@@ -329,6 +337,48 @@
         }
       }
 
+      // Check if URL has a valid path (not just domain or domain/)
+      function hasValidPath(url) {
+        if (!url || url.trim() === "") {
+          return false;
+        }
+        
+        try {
+          // Remove protocol if present
+          let cleanUrl = url.replace(/^https?:\/\//, "");
+          // Remove www. if present
+          cleanUrl = cleanUrl.replace(/^www\./, "");
+          
+          // Split by / to get path
+          const parts = cleanUrl.split("/");
+          
+          // If only one part (just domain) or two parts with empty second part (domain/)
+          if (parts.length === 1 || (parts.length === 2 && parts[1] === "")) {
+            return false;
+          }
+          
+          // Check if there's actual content in the path (not just trailing slashes)
+          const pathPart = parts.slice(1).join("/").replace(/\/+$/, "");
+          return pathPart.length > 0;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      // Normalize URL for duplicate checking
+      function normalizeUrl(url) {
+        if (!url) return "";
+        try {
+          let normalized = url.trim().toLowerCase();
+          normalized = normalized.replace(/^https?:\/\//, "");
+          normalized = normalized.replace(/^www\./, "");
+          normalized = normalized.replace(/\/+$/, ""); // Remove trailing slashes
+          return normalized;
+        } catch (e) {
+          return url.toLowerCase();
+        }
+      }
+
       // Check source against RSP
       function checkSource(url) {
         if (!url || url.trim() === "") {
@@ -390,16 +440,24 @@
       // Update source hint
       function updateSourceHint(sourceInput, hintElement) {
         const url = sourceInput.value.trim();
-        const result = checkSource(url);
-
+        
         if (url === "") {
           hintElement.textContent = "";
           hintElement.className = "step3-hint";
           hintElement.classList.remove("show");
-        } else {
-          hintElement.textContent = result.message;
-          hintElement.className = "step3-hint show " + result.className;
+          return;
         }
+        
+        // Check if URL has valid path
+        if (!hasValidPath(url)) {
+          hintElement.textContent = "Please provide a complete URL with a path, not just a domain.";
+          hintElement.className = "step3-hint show error";
+          return;
+        }
+        
+        const result = checkSource(url);
+        hintElement.textContent = result.message;
+        hintElement.className = "step3-hint show " + result.className;
       }
 
       // Calculate points for a source
@@ -449,6 +507,26 @@
           };
         }
 
+        // Check for valid paths in all filled sources
+        for (const source of filledSources) {
+          if (!hasValidPath(source)) {
+            return {
+              success: false,
+              message: "Please provide complete URLs with paths, not just domains (e.g., 'nytimes.com/article/title' not 'nytimes.com').",
+            };
+          }
+        }
+
+        // Check for duplicate sources
+        const normalizedSources = filledSources.map(normalizeUrl);
+        const uniqueSources = new Set(normalizedSources);
+        if (uniqueSources.size !== filledSources.length) {
+          return {
+            success: false,
+            message: "You have submitted duplicate sources. Please provide unique sources.",
+          };
+        }
+
         // Calculate total points and check for banned sources
         let totalPoints = 0;
         let hasBannedSource = false;
@@ -481,6 +559,24 @@
         }
 
         return { success: true, message: "" };
+      }
+
+      // Start timer for create draft button
+      function startTimer(buttonId, timerId) {
+        let timeLeft = 10;
+        const button = document.getElementById(buttonId);
+        const timerSpan = document.getElementById(timerId);
+        
+        const interval = setInterval(() => {
+          timeLeft--;
+          timerSpan.textContent = timeLeft;
+          
+          if (timeLeft <= 0) {
+            clearInterval(interval);
+            button.disabled = false;
+            button.textContent = "create draft anyway";
+          }
+        }, 1000);
       }
 
       // Show step
@@ -527,6 +623,29 @@
         });
         document.getElementById(screenId).classList.add("active");
         document.getElementById("nav_buttons").style.display = "none";
+        
+        // Start timer for create draft buttons
+        if (screenId === "fail_blp1e") {
+          // Reset button state
+          const button = document.getElementById("create_draft_blp1e");
+          const timerSpan = document.getElementById("timer_blp1e");
+          button.disabled = true;
+          timerSpan.textContent = "10";
+          button.textContent = "create draft anyway (";
+          button.appendChild(timerSpan);
+          button.appendChild(document.createTextNode(")"));
+          startTimer("create_draft_blp1e", "timer_blp1e");
+        } else if (screenId === "fail_poor_sources") {
+          // Reset button state
+          const button = document.getElementById("create_draft_sources");
+          const timerSpan = document.getElementById("timer_sources");
+          button.disabled = true;
+          timerSpan.textContent = "10";
+          button.textContent = "create draft anyway (";
+          button.appendChild(timerSpan);
+          button.appendChild(document.createTextNode(")"));
+          startTimer("create_draft_sources", "timer_sources");
+        }
       }
 
       // Validate step 1
@@ -671,6 +790,11 @@
         showStep(1);
       }
 
+      // Handle create draft button clicks
+      function handleCreateDraft() {
+        alert("This would redirect to the draft creation page.");
+      }
+
       // Initialize
       document.addEventListener("DOMContentLoaded", async () => {
         await loadRSPSources();
@@ -687,6 +811,12 @@
         document
           .getElementById("restart_success")
           .addEventListener("click", resetDemo);
+        document
+          .getElementById("create_draft_blp1e")
+          .addEventListener("click", handleCreateDraft);
+        document
+          .getElementById("create_draft_sources")
+          .addEventListener("click", handleCreateDraft);
 
         // Update step 2 question when page type changes
         document
